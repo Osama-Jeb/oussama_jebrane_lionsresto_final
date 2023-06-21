@@ -14318,5 +14318,32 @@ main .first_main .introText h2, main .first_main .introText .h2 {
   font-size: 3rem;
   font-weight: bold;
 }
+main .second_main .aboutTitle h2, main .second_main .aboutTitle .h2 {
+  font-family: amatic-b;
+}
+main .second_main .about .aboutImg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+main .second_main .about .aboutImg .aboutNumber {
+  position: absolute;
+  background-color: white;
+  height: fit-content;
+  width: 80%;
+  bottom: 10%;
+  text-align: center;
+}
+main .second_main .about .aboutText ul {
+  list-style: url("../img/check-double-solid.svg");
+  font-size: larger;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  main .second_main .about .aboutImg {
+    width: 50%;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */

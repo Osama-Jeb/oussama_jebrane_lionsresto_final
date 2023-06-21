@@ -8,4 +8,46 @@ main{
             }
         }
     }
+
+    .second_main{
+        .aboutTitle{
+            h2{
+                font-family: amatic-b;
+            }
+        }
+        .about{
+            .aboutImg{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                .aboutNumber{
+                    position: absolute;
+                    background-color: white;
+                    height: fit-content;
+                    width: 80%;
+                    bottom: 10%;
+                    text-align: center;
+                }
+            }
+            .aboutText{
+                ul{
+                    list-style: url("../img/check-double-solid.svg");
+                    font-size: larger;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 768px){
+    main{
+        .second_main{
+            .about{
+                .aboutImg{
+                    width: 50%;
+                }
+            }
+        }
+    }
 }
