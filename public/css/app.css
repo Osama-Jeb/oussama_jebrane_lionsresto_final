@@ -11911,5 +11911,39 @@ header nav ul .dropdown .dropdown-content .dropLink {
 header nav ul .dropdown:hover .dropdown-content {
   display: block;
 }
+header nav .btnHolder label #btn,
+header nav .btnHolder label #cancel {
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: none;
+}
+header nav .btnHolder #check {
+  display: none;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  header nav {
+    height: fit-content;
+  }
+  header nav ul {
+    position: absolute;
+    width: 100vw;
+    background-color: white;
+    top: 100px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  header nav .btnHolder .hamburger {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: x-large;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */

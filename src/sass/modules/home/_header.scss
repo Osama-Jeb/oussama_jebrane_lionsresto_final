@@ -16,43 +16,93 @@ header {
 
             li {
                 font-size: larger;
+
                 a {
                     text-decoration: none;
                     color: gray;
                     font-weight: bold;
                 }
+
                 a:hover {
                     color: black;
                     text-decoration: underline red;
                 }
             }
+
             .dropdown {
                 position: relative;
                 display: inline-block;
-                .dropbtn{
+
+                .dropbtn {
                     border: none;
                     outline: none;
                     background-color: transparent;
                     color: gray;
                     font-weight: bold;
                 }
+
                 .dropdown-content {
                     display: none;
                     position: absolute;
                     background-color: #f1f1f1;
                     min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                     z-index: 1;
-                    .dropLink{
+
+                    .dropLink {
                         color: gray;
                         display: block;
                     }
                 }
-            }.dropdown:hover .dropdown-content {display: block;}
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
         }
 
-        // button {
-            
-        // }
+        .btnHolder {
+
+            label #btn,
+            label #cancel {
+                color: white;
+                font-size: 30px;
+                float: right;
+                line-height: 80px;
+                margin-right: 40px;
+                margin-top: 15px;
+                cursor: pointer;
+                display: none;
+            }
+
+            #check {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 375px) and (max-width: 768px) {
+    header {
+        nav {
+            height: fit-content;
+            ul {
+                position: absolute;
+                width: 100vw;
+                background-color: white;
+                top: 100px;
+                text-align: center;
+                transition: all .5s;
+            }
+        .btnHolder{
+            .hamburger{
+                border: none;
+                outline: none;
+                background-color: transparent;
+                font-size: x-large;
+            }
+        }
+        }
     }
 }
