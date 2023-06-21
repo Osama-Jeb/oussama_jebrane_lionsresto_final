@@ -83,6 +83,40 @@ main {
             }
         }
     }
+
+    .fourth_section{
+        background-image: url("../img/stats-bg.jpg");
+        height: fit-content;
+        min-height: 40vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        z-index: -1;
+        .black{
+            position: absolute;
+            top: 0;
+            background-color: black;
+            opacity: 0.5;
+            height: 100%;
+            width: 100%;
+            z-index: -1111;
+        }
+        .stats{
+            color: white;
+            z-index: 1011;
+            width: 100%;
+            .firstStats{
+                div{
+                    width: 25%;
+                }
+            }
+            .secondStats{
+                div{
+                    width: 25%;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -104,5 +138,10 @@ main {
                 text-align: center;
             }
         }
+        // .fourth_section{
+        //     .stats{
+        //         
+        //     }
+        // }
     }
 }
