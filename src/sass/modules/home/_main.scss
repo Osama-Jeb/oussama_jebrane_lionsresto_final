@@ -1,28 +1,30 @@
-main{
-    .first_main{
-        .introText{
-            h2{
+main {
+    .first_main {
+        .introText {
+            h2 {
                 font-family: amatic-b;
                 font-size: 3rem;
-                font-weight:bold ;
+                font-weight: bold;
             }
         }
     }
 
-    .second_main{
-        .aboutTitle{
-            h2{
+    .second_main {
+        .aboutTitle {
+            h2 {
                 font-family: amatic-b;
             }
         }
-        .about{
-            .aboutImg{
+
+        .about {
+            .aboutImg {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: end;
                 width: 50%;
-                .aboutNumber{
+
+                .aboutNumber {
                     position: absolute;
                     background-color: white;
                     height: fit-content;
@@ -31,36 +33,75 @@ main{
                     text-align: center;
                 }
             }
-            .aboutText{
+
+            .aboutText {
                 width: 50%;
-                ul{
+
+                ul {
                     list-style: url("../img/check-double-solid.svg");
                     font-size: larger;
                 }
-                .aboutVideo{
+
+                .aboutVideo {
                     position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    button{
+
+                    button {
                         position: absolute;
                     }
                 }
             }
         }
     }
+
+    .third_section {
+        .why {
+            background-color: rgb(202, 0, 0);
+            color: white;
+            width: 75%;
+
+            .whyLearn {
+                background-color: rgb(250, 91, 91);
+            }
+
+            .whyLearn:hover {
+                background-color: white;
+                color: red !important;
+            }
+        }
+
+        .reasons {
+            .reason {
+                height: 90%;
+            }
+
+            .reason:hover {
+                transform: scale(1.2);
+                transition: all 0.4s;
+            }
+        }
+    }
 }
 
-@media (min-width: 375px) and (max-width: 768px){
-    main{
-        .second_main{
-            .about{
-                .aboutImg{
+@media (min-width: 375px) and (max-width: 768px) {
+    main {
+        .second_main {
+            .about {
+                .aboutImg {
                     width: 100%;
                 }
-                .aboutText{
+
+                .aboutText {
                     width: 100%;
                 }
+            }
+        }
+        .third_section{
+            .why{
+                width: 100%;
+                text-align: center;
             }
         }
     }

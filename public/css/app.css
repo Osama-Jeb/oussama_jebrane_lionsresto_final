@@ -14352,6 +14352,25 @@ main .second_main .about .aboutText .aboutVideo {
 main .second_main .about .aboutText .aboutVideo button {
   position: absolute;
 }
+main .third_section .why {
+  background-color: rgb(202, 0, 0);
+  color: white;
+  width: 75%;
+}
+main .third_section .why .whyLearn {
+  background-color: rgb(250, 91, 91);
+}
+main .third_section .why .whyLearn:hover {
+  background-color: white;
+  color: red !important;
+}
+main .third_section .reasons .reason {
+  height: 90%;
+}
+main .third_section .reasons .reason:hover {
+  transform: scale(1.2);
+  transition: all 0.4s;
+}
 
 @media (min-width: 375px) and (max-width: 768px) {
   main .second_main .about .aboutImg {
@@ -14359,6 +14378,10 @@ main .second_main .about .aboutText .aboutVideo button {
   }
   main .second_main .about .aboutText {
     width: 100%;
+  }
+  main .third_section .why {
+    width: 100%;
+    text-align: center;
   }
 }
 
