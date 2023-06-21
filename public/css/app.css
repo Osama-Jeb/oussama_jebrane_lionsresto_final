@@ -14424,6 +14424,34 @@ main .seventh_section .chefCards .chef {
   background-color: white;
   width: 30vw;
 }
+main .eigth_section {
+  padding: 20px;
+}
+main .eigth_section img {
+  width: 33%;
+}
+main .eigth_section .booking-inputs form div input {
+  width: 30%;
+  padding: 10px;
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  main .eigth_section .booking-inputs form div input {
+    width: 100%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  main .eigth_section .booking-inputs form div input {
+    width: 45%;
+    margin-left: 15px;
+  }
+  main .eigth_section .booking-inputs form div textarea {
+    margin-left: 15px;
+  }
+}
+main .eigth_section .booking-inputs form div textarea {
+  width: 95%;
+  padding: 10px;
+}
 
 @media (min-width: 375px) and (max-width: 768px) {
   main .second_main .about .aboutImg {
@@ -14438,6 +14466,10 @@ main .seventh_section .chefCards .chef {
   }
   main .seventh_section .chefCards .chef {
     width: 300px;
+  }
+  main .eigth_section img {
+    width: 100%;
+    height: 75vh;
   }
 }
 
