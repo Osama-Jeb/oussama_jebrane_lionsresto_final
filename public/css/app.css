@@ -14326,6 +14326,7 @@ main .second_main .about .aboutImg {
   display: flex;
   justify-content: center;
   align-items: end;
+  width: 50%;
 }
 main .second_main .about .aboutImg .aboutNumber {
   position: absolute;
@@ -14335,14 +14336,29 @@ main .second_main .about .aboutImg .aboutNumber {
   bottom: 10%;
   text-align: center;
 }
+main .second_main .about .aboutText {
+  width: 50%;
+}
 main .second_main .about .aboutText ul {
   list-style: url("../img/check-double-solid.svg");
   font-size: larger;
 }
+main .second_main .about .aboutText .aboutVideo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .second_main .about .aboutText .aboutVideo button {
+  position: absolute;
+}
 
 @media (min-width: 375px) and (max-width: 768px) {
   main .second_main .about .aboutImg {
-    width: 50%;
+    width: 100%;
+  }
+  main .second_main .about .aboutText {
+    width: 100%;
   }
 }
 

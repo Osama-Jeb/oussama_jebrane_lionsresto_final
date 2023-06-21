@@ -21,6 +21,7 @@ main{
                 display: flex;
                 justify-content: center;
                 align-items: end;
+                width: 50%;
                 .aboutNumber{
                     position: absolute;
                     background-color: white;
@@ -31,9 +32,19 @@ main{
                 }
             }
             .aboutText{
+                width: 50%;
                 ul{
                     list-style: url("../img/check-double-solid.svg");
                     font-size: larger;
+                }
+                .aboutVideo{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    button{
+                        position: absolute;
+                    }
                 }
             }
         }
@@ -45,7 +56,10 @@ main{
         .second_main{
             .about{
                 .aboutImg{
-                    width: 50%;
+                    width: 100%;
+                }
+                .aboutText{
+                    width: 100%;
                 }
             }
         }

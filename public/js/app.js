@@ -1,3 +1,4 @@
+//todo THE NAV BAR IS STILL VISIBLE
 let ham = document.querySelector(".hamburger");
 let ulLinks = document.querySelector(".links");
 ulLinks.style.right = "-100%"
