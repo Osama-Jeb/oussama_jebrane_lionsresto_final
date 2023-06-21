@@ -14400,6 +14400,9 @@ main .fourth_section .stats .firstStats div {
 main .fourth_section .stats .secondStats div {
   width: 25%;
 }
+main .fifth_section .menuTitle h2, main .fifth_section .menuTitle .h2 {
+  font-family: amatic-b;
+}
 
 @media (min-width: 375px) and (max-width: 768px) {
   main .second_main .about .aboutImg {
