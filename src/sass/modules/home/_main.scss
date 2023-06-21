@@ -126,7 +126,32 @@ main {
     }
     .sixth_section{
         .caro-item{
-            
+            width: 33vw;
+            position: relative;
+            color: white;
+            img{
+                height: 20vw;
+                filter: brightness(50%);
+                // position: absolute;
+            }
+            .caro-text{
+                position: absolute;
+                bottom: 0;
+                margin: 10px;
+            }
+        }
+    }
+    .seventh_section{
+        .chefTitle{
+            h2{
+                font-family: amatic-b;
+            }
+        }
+        .chefCards{
+            .chef{
+                background-color: white;
+                width: 30vw;
+            }
         }
     }
 }
@@ -148,6 +173,13 @@ main {
             .why{
                 width: 100%;
                 text-align: center;
+            }
+        }
+        .seventh_section{
+            .chefCards{
+                .chef{
+                    width: 300px;
+                }
             }
         }
     }

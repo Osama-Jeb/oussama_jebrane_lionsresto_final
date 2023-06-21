@@ -14403,6 +14403,28 @@ main .fourth_section .stats .secondStats div {
 main .fifth_section .menuTitle h2, main .fifth_section .menuTitle .h2 {
   font-family: amatic-b;
 }
+main .sixth_section .caro-item {
+  width: 33vw;
+  position: relative;
+  color: white;
+}
+main .sixth_section .caro-item img {
+  height: 20vw;
+  filter: brightness(50%);
+}
+main .sixth_section .caro-item .caro-text {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+}
+main .seventh_section .chefTitle h2, main .seventh_section .chefTitle .h2 {
+  font-family: amatic-b;
+}
+main .seventh_section .chefCards .chef {
+  background-color: white;
+  width: 30vw;
+}
+
 @media (min-width: 375px) and (max-width: 768px) {
   main .second_main .about .aboutImg {
     width: 100%;
@@ -14413,6 +14435,9 @@ main .fifth_section .menuTitle h2, main .fifth_section .menuTitle .h2 {
   main .third_section .why {
     width: 100%;
     text-align: center;
+  }
+  main .seventh_section .chefCards .chef {
+    width: 300px;
   }
 }
 
