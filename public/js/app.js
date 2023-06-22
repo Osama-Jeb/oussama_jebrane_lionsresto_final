@@ -88,7 +88,7 @@ let li_circles = document.querySelectorAll(".slider-controls li");
 li_circles.forEach(function (indicator, ind) {
     // if one of them is clicked then execute the function
     indicator.addEventListener('click', function () {
-
+        
         // ind is the index of the currently cliccked li circle
         sectionIndex = ind + 2;
         // choose the currently selected circle and remove the class selected from it
@@ -100,3 +100,31 @@ li_circles.forEach(function (indicator, ind) {
     });
 });
 
+// Hahaha it worked XD
+window.onload = function () {
+    li_circles[0].click();
+}
+
+//* EVENTS CAROUSEL
+
+let slider2 = document.querySelector(".slider2");
+let sectionIndex2 = 0;
+let numberOfSlide2 = 7;
+let li_circles2 = document.querySelectorAll(".slider-controls2 li");
+li_circles2.forEach(function (indicator2, ind) {
+    // if one of them is clicked then execute the function
+    indicator2.addEventListener('click', function () {
+        
+        // ind is the index of the currently cliccked li circle
+        sectionIndex2 = ind + 2;
+        // choose the currently selected circle and remove the class selected from it
+        document.querySelector('.slider-controls2 .selected2').classList.remove('selected2');
+        // add it to the circle we just clicked
+        indicator2.classList.add('selected2');
+        // simple terms: move to the corresponding carousel item
+        slider2.style.transform = 'translate(' + (sectionIndex2) * -100 / numberOfSlide2 + '%)';
+    });
+});
+window.onload = function () {
+    li_circles2[0].click();
+}

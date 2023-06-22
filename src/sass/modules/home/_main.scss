@@ -93,7 +93,8 @@ main {
                     button {
                         position: absolute;
                     }
-                    button:hover{
+
+                    button:hover {
                         box-shadow: 0px 0px 20px 5px $chefRed;
                     }
                 }
@@ -182,23 +183,83 @@ main {
     .sixth_section {
         height: fit-content;
         padding: 20px;
+        /* container */
+        .caro-holder2 {
+            overflow-x: hidden;
 
-        .caro-item {
-            width: 33vw;
-            position: relative;
-            color: white;
+            .carous2 {
+                height: 450px;
+                width: 33vw;
+                position: relative;
+                
+                .slider2 {
+                    height: 100%;
+                    width: 700%;
+                    transition: all 0.7s;
+                    section {
+                        flex-basis: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 5px;
+                        position: relative;
 
-            img {
-                height: 20vw;
-                filter: brightness(50%);
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            filter: brightness(50%);
+                            position: absolute;
+                        }
+                        .caro-text{
+                            position: absolute;
+                            left: 0;
+                            z-index: 1111;
+                            color: white;
+                            left: 5%;
+                            bottom: 10%;
+                            h3{
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+
+                .slider-controls2 {
+                    ul {
+                        bottom: 20px;
+                        transform: translate(-50%);
+
+                        li {
+                            width: 20px;
+                            height: 20px;
+                            border: 1px solid gray;
+                            border-radius: 50%;
+                            margin: 3px;
+                            background: gray;
+                            cursor: pointer;
+                        }
+
+                        li.selected2 {
+                            background: #f54343;
+                        }
+                    }
+                }
             }
 
-            .caro-text {
-                position: absolute;
-                bottom: 0;
-                margin: 10px;
+            @media (min-width: 375px) and (max-width: 425px) {
+                .carous2 {
+                    width: 80vw;
+                }
             }
+
+            @media (min-width: 426px) and (max-width: 768px) {
+                .carous2 {
+                    width: 50vw;
+                }
+            }
+
         }
+
     }
 
     .seventh_section {
@@ -283,79 +344,68 @@ main {
 
         /* container */
         .caro-holder {
-            display: flex;
-            justify-content: center;
             overflow-x: hidden;
-        }
 
-        .carous {
-            border: 5px solid $chefRed;
-            height: 200px;
-            width: 25vw;
-            position: relative;
 
-            .slider {
-                display: flex;
-                justify-content: start;
-                height: 100%;
-                width: 1200%;
-                transition: all 0.7s;
+            .carous {
+                border: 5px solid $chefRed;
+                height: 200px;
+                width: 25vw;
+                position: relative;
 
-                section {
-                    flex-basis: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 5px;
+                .slider {
+                    height: 100%;
+                    width: 1200%;
+                    transition: all 0.7s;
 
-                    img {
-                        height: 100%;
-                        width: 100%;
+                    section {
+                        flex-basis: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 5px;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .slider-controls {
+                    ul {
+                        bottom: 20px;
+                        transform: translate(-50%);
+
+                        li {
+                            width: 20px;
+                            height: 20px;
+                            border: 1px solid gray;
+                            border-radius: 50%;
+                            margin: 3px;
+                            background: gray;
+                            cursor: pointer;
+                        }
+
+                        li.selected {
+                            background: #f54343;
+                        }
                     }
                 }
             }
 
-            .slider-controls {
-                position: absolute;
-                left: 50%;
-
-                ul {
-                    position: absolute;
-                    bottom: 20px;
-                    left: 50%;
-                    transform: translate(-50%);
-                    list-style: none;
-                    display: flex;
-                    padding: 0;
-                    margin: 0;
-
-                    li {
-                        width: 20px;
-                        height: 20px;
-                        border: 1px solid gray;
-                        border-radius: 50%;
-                        margin: 3px;
-                        background: gray;
-                        cursor: pointer;
-                    }
-
-                    li.selected {
-                        background: #f54343;
-                    }
+            @media (min-width: 375px) and (max-width: 425px) {
+                .carous {
+                    width: 80vw;
                 }
             }
-        }
 
-        @media (min-width: 375px) and (max-width: 425px) {
-            .carous {
-                width: 80vw;
+            @media (min-width: 426px) and (max-width: 768px) {
+                .carous {
+                    width: 50vw;
+                }
             }
-        }
 
-        @media (min-width: 426px) and (max-width: 768px) {
-            .carous {
-                width: 50vw;
-            }
         }
 
 
