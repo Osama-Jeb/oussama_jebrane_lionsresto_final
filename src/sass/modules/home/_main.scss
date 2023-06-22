@@ -1,5 +1,7 @@
 main {
     .first_main {
+        height: fit-content;
+
         .introText {
             h2 {
                 font-family: amatic-b;
@@ -10,6 +12,8 @@ main {
     }
 
     .second_main {
+        height: fit-content;
+
         .aboutTitle {
             h2 {
                 font-family: amatic-b;
@@ -57,6 +61,8 @@ main {
     }
 
     .third_section {
+        height: fit-content;
+
         .why {
             background-color: rgb(202, 0, 0);
             color: white;
@@ -84,7 +90,7 @@ main {
         }
     }
 
-    .fourth_section{
+    .fourth_section {
         background-image: url("../img/stats-bg.jpg");
         height: fit-content;
         min-height: 40vh;
@@ -92,7 +98,8 @@ main {
         display: flex;
         align-items: center;
         z-index: -1;
-        .black{
+
+        .black {
             position: absolute;
             top: 0;
             background-color: black;
@@ -101,90 +108,152 @@ main {
             width: 100%;
             z-index: -1111;
         }
-        .stats{
+
+        .stats {
             color: white;
             z-index: 1011;
             width: 100%;
-            .firstStats{
-                div{
+
+            .firstStats {
+                div {
                     width: 25%;
                 }
             }
-            .secondStats{
-                div{
+
+            .secondStats {
+                div {
                     width: 25%;
                 }
             }
         }
     }
-    .fifth_section{
-        .menuTitle{
-            h2{
+
+    .fifth_section {
+        height: fit-content;
+
+        .menuTitle {
+            h2 {
                 font-family: amatic-b;
             }
         }
     }
-    .sixth_section{
-        .caro-item{
+
+    .sixth_section {
+        height: fit-content;
+        padding: 20px;
+
+        .caro-item {
             width: 33vw;
             position: relative;
             color: white;
-            img{
+
+            img {
                 height: 20vw;
                 filter: brightness(50%);
                 // position: absolute;
             }
-            .caro-text{
+
+            .caro-text {
                 position: absolute;
                 bottom: 0;
                 margin: 10px;
             }
         }
     }
-    .seventh_section{
-        .chefTitle{
-            h2{
+
+    .seventh_section {
+        .chefTitle {
+            h2 {
                 font-family: amatic-b;
             }
         }
-        .chefCards{
-            .chef{
+
+        .chefCards {
+            .chef {
                 background-color: white;
                 width: 30vw;
             }
         }
     }
 
-    .eigth_section{
+    .eigth_section {
         padding: 20px;
-        img{
+
+        img {
             width: 33%;
         }
-        .booking-inputs{
-            form{
-                div{
-                    input{
+
+        .booking-inputs {
+            form {
+                div {
+                    input {
                         width: 30%;
                         padding: 10px;
                     }
+
                     @media (min-width: 375px) and (max-width: 425px) {
-                        input{
+                        input {
                             width: 100%;
                         }
                     }
+
                     @media (min-width: 426px) and (max-width: 768px) {
-                        input{
+                        input {
                             width: 45%;
                             margin-left: 15px;
                         }
-                        textarea{
+
+                        textarea {
                             margin-left: 15px;
                         }
                     }
-                    textarea{
+
+                    textarea {
                         width: 95%;
                         padding: 10px;
                     }
+                }
+            }
+        }
+    }
+
+    // .ninth_section{
+
+    // }
+
+
+    .tenth_section {
+        .contactInfo {
+            .contactPart1 {
+                .contactItem {
+                    width: 49%;
+                    padding: 15px;
+                }
+
+                @media (min-width:375px) and (max-width: 425px) {
+                    .contactItem {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .contactInputs {
+            padding: 16px;
+            margin-top: 20px;
+
+            form {
+                padding: 20px;
+                box-shadow: 0px 0px 50px -1px rgb(192, 192, 192);
+
+                .nameEmail {
+                    input {
+                        width: 50%;
+                    }
+                }
+
+                textarea {
+                    padding: 10px;
                 }
             }
         }
@@ -204,23 +273,38 @@ main {
                 }
             }
         }
-        .third_section{
-            .why{
+
+        .third_section {
+            .why {
                 width: 100%;
                 text-align: center;
             }
         }
-        .seventh_section{
-            .chefCards{
-                .chef{
+
+        .seventh_section {
+            .chefCards {
+                .chef {
                     width: 300px;
                 }
             }
         }
-        .eigth_section{
-            img{
+
+        .eigth_section {
+            img {
                 width: 100%;
                 height: 75vh;
+            }
+        }
+
+        .tenth_section{
+            .contactInputs{
+                form{
+                    .nameEmail{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }

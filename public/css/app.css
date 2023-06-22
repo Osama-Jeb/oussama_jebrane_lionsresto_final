@@ -14313,10 +14313,16 @@ header nav .btnHolder #check {
     font-size: x-large;
   }
 }
+main .first_main {
+  height: fit-content;
+}
 main .first_main .introText h2, main .first_main .introText .h2 {
   font-family: amatic-b;
   font-size: 3rem;
   font-weight: bold;
+}
+main .second_main {
+  height: fit-content;
 }
 main .second_main .aboutTitle h2, main .second_main .aboutTitle .h2 {
   font-family: amatic-b;
@@ -14351,6 +14357,9 @@ main .second_main .about .aboutText .aboutVideo {
 }
 main .second_main .about .aboutText .aboutVideo button {
   position: absolute;
+}
+main .third_section {
+  height: fit-content;
 }
 main .third_section .why {
   background-color: rgb(202, 0, 0);
@@ -14400,8 +14409,15 @@ main .fourth_section .stats .firstStats div {
 main .fourth_section .stats .secondStats div {
   width: 25%;
 }
+main .fifth_section {
+  height: fit-content;
+}
 main .fifth_section .menuTitle h2, main .fifth_section .menuTitle .h2 {
   font-family: amatic-b;
+}
+main .sixth_section {
+  height: fit-content;
+  padding: 20px;
 }
 main .sixth_section .caro-item {
   width: 33vw;
@@ -14452,6 +14468,29 @@ main .eigth_section .booking-inputs form div textarea {
   width: 95%;
   padding: 10px;
 }
+main .tenth_section .contactInfo .contactPart1 .contactItem {
+  width: 49%;
+  padding: 15px;
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  main .tenth_section .contactInfo .contactPart1 .contactItem {
+    width: 100%;
+  }
+}
+main .tenth_section .contactInputs {
+  padding: 16px;
+  margin-top: 20px;
+}
+main .tenth_section .contactInputs form {
+  padding: 20px;
+  box-shadow: 0px 0px 50px -1px rgb(192, 192, 192);
+}
+main .tenth_section .contactInputs form .nameEmail input {
+  width: 50%;
+}
+main .tenth_section .contactInputs form textarea {
+  padding: 10px;
+}
 
 @media (min-width: 375px) and (max-width: 768px) {
   main .second_main .about .aboutImg {
@@ -14470,6 +14509,9 @@ main .eigth_section .booking-inputs form div textarea {
   main .eigth_section img {
     width: 100%;
     height: 75vh;
+  }
+  main .tenth_section .contactInputs form .nameEmail input {
+    width: 100%;
   }
 }
 
