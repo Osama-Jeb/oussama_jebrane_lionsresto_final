@@ -1,10 +1,13 @@
 footer {
     .footerInfo {
-        div {
-            width: 30%;
-
-            div {
-                width: 100%;
+        .holderTwo {
+            i{
+                color: gray;
+            }
+            .social{
+                border-radius: 50%;
+                border: 1px solid gray;
+                padding: 7px;
             }
         }
     }

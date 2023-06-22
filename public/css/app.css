@@ -14518,11 +14518,13 @@ main .tenth_section .contactInputs form textarea {
     width: 100%;
   }
 }
-footer .footerInfo div {
-  width: 30%;
+footer .footerInfo .holderTwo i {
+  color: gray;
 }
-footer .footerInfo div div {
-  width: 100%;
+footer .footerInfo .holderTwo .social {
+  border-radius: 50%;
+  border: 1px solid gray;
+  padding: 7px;
 }
 
 /*# sourceMappingURL=app.css.map */
