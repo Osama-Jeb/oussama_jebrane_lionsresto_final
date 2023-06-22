@@ -65,21 +65,37 @@
 
 
     <main>
-        <div
-        id="first_section"
-            class="first_section bg-chefGray d-flex flex-column-reverse flex-lg-row align-items-center justify-content-around p-5">
+        <div id="first_section"
+            class="first_section bg-chefGray d-flex flex-column-reverse flex-lg-row align-items-center justify-content-around">
 
             <div class="introText text-center text-lg-start">
                 <h2>Enjoy your healthy decilicious food</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, totam?</p>
-                <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
-                    <button class="btn btn-chefRed rounded-pill">
-                        Book a Table
-                    </button>
-                    <button class="btn bg-transparent">
+                <div class="divMod d-flex gap-2 justify-content-center justify-content-lg-start">
+                    <a href="#eigth_section">
+                        <button class="btn btn-chefRed rounded-pill">
+                            Book a Table
+                        </button>
+                    </a>
+
+                    <button class="watchVid btn bg-transparent" id="mod1">
                         <i class="fa-solid fa-circle-play text-chefRed"></i>
                         Watch Video
                     </button>
+                    <!--: REMEMEBR THIS -->
+                    <div class="d-none mod signUp" id="mod1">
+                        <button class="closeMod x" id="mod1"> X </button>
+
+                        <div class="modContent" id="mod1">
+                            <iframe class="ytVidFrame" width="560" height="315"
+                                src="https://www.youtube.com/embed/AqKm5HFWAZw" allow="autoplay"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -126,7 +142,7 @@
 
                     <div class="aboutVideo w-100">
                         <img src="./public/img/about-2.jpg" class="w-100" alt="">
-                        <button>VIDEO IN js</button>
+                        <button class="watchVid">VIDEO IN js</button>
                     </div>
                 </div>
             </div>
@@ -681,7 +697,7 @@
                         Lorem ipsum dolor sit amet consectetur.
                     </div>
                 </div>
-    
+
                 <div class="footerItem d-flex gap-3">
                     <i class="fa-solid fa-phone fs-3"></i>
                     <div class="d-flex flex-column">
@@ -701,7 +717,7 @@
                         Lorem ipsum dolor sit amet consectetur.
                     </div>
                 </div>
-    
+
                 <div class="footerItem d-flex gap-3 mt-3 mt-md-0">
                     <div class="d-flex flex-column">
                         <p class="text-white"><b>Follow Us</b></p>
