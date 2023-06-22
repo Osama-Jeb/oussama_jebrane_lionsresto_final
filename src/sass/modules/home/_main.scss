@@ -93,6 +93,9 @@ main {
                     button {
                         position: absolute;
                     }
+                    button:hover{
+                        box-shadow: 0px 0px 20px 5px $chefRed;
+                    }
                 }
             }
         }
@@ -188,7 +191,6 @@ main {
             img {
                 height: 20vw;
                 filter: brightness(50%);
-                // position: absolute;
             }
 
             .caro-text {
@@ -224,8 +226,9 @@ main {
     .eigth_section {
         padding: 20px;
         height: fit-content;
-        .bookTitle{
-            h2{
+
+        .bookTitle {
+            h2 {
                 font-family: amatic-b;
             }
         }
@@ -272,8 +275,8 @@ main {
         height: fit-content;
         padding: 20px;
 
-        .galleryTitle{
-            h2{
+        .galleryTitle {
+            h2 {
                 font-family: amatic-b;
             }
         }
@@ -290,30 +293,32 @@ main {
             height: 200px;
             width: 25vw;
             position: relative;
-            
+
             .slider {
                 display: flex;
                 justify-content: start;
                 height: 100%;
                 width: 1200%;
                 transition: all 0.7s;
-    
+
                 section {
                     flex-basis: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     margin: 5px;
-                    img{
+
+                    img {
                         height: 100%;
                         width: 100%;
                     }
                 }
             }
+
             .slider-controls {
                 position: absolute;
                 left: 50%;
-    
+
                 ul {
                     position: absolute;
                     bottom: 20px;
@@ -323,7 +328,7 @@ main {
                     display: flex;
                     padding: 0;
                     margin: 0;
-    
+
                     li {
                         width: 20px;
                         height: 20px;
@@ -333,18 +338,20 @@ main {
                         background: gray;
                         cursor: pointer;
                     }
-    
+
                     li.selected {
                         background: #f54343;
                     }
                 }
             }
         }
+
         @media (min-width: 375px) and (max-width: 425px) {
             .carous {
                 width: 80vw;
             }
         }
+
         @media (min-width: 426px) and (max-width: 768px) {
             .carous {
                 width: 50vw;
@@ -360,8 +367,8 @@ main {
         height: fit-content;
         padding: 20px;
 
-        .contactTitle{
-            h2{
+        .contactTitle {
+            h2 {
                 font-family: amatic-b;
             }
         }
@@ -405,7 +412,7 @@ main {
 
 @media (min-width: 375px) and (max-width: 768px) {
     main {
-        .second_main {
+        .second_section {
             .about {
                 .aboutImg {
                     width: 100%;

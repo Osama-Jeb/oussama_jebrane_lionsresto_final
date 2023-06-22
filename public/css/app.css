@@ -14228,6 +14228,15 @@ textarea.form-control-lg {
   font-family: amatic-b;
   src: url("../../public/fonts/AmaticSC-Bold.ttf");
 }
+header .anchor {
+  background-color: #cb1311;
+  border-radius: 50%;
+  position: fixed;
+  padding: 10px;
+  bottom: 10%;
+  right: 5%;
+  z-index: 121212;
+}
 header nav {
   padding: 20px;
   position: fixed;
@@ -14252,6 +14261,7 @@ header nav ul li a {
   display: inline-block;
   color: gray;
   font-weight: bold;
+  padding: 5px;
 }
 header nav ul li a::after {
   content: "";
@@ -14402,6 +14412,9 @@ main .second_section .about .aboutText .aboutVideo {
 }
 main .second_section .about .aboutText .aboutVideo button {
   position: absolute;
+}
+main .second_section .about .aboutText .aboutVideo button:hover {
+  box-shadow: 0px 0px 20px 5px #cb1311;
 }
 main .third_section {
   height: fit-content;
@@ -14629,10 +14642,10 @@ main .tenth_section .contactInputs form textarea {
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
-  main .second_main .about .aboutImg {
+  main .second_section .about .aboutImg {
     width: 100%;
   }
-  main .second_main .about .aboutText {
+  main .second_section .about .aboutText {
     width: 100%;
   }
   main .third_section .why {

@@ -4,7 +4,7 @@ let ulLinks = document.querySelector(".links");
 ulLinks.style.right = "-100%";
 ulLinks.style.display = "none";
 
-ham.addEventListener("click", ()=>{
+ham.addEventListener("click", () => {
     if (ulLinks.style.right == "-100%") {
         ulLinks.style.right = "0%";
         ham.innerHTML = `<i class="fa-solid fa-x"></i>`
@@ -72,7 +72,7 @@ for (let index = 0; index < watchVidBtns.length; index++) {
     }
 }
 
-// GALLERY CAROUSEL
+//* GALLERY CAROUSEL
 // ALL MY IMAGES
 const slider = document.querySelector(".slider");
 
@@ -90,7 +90,7 @@ li_circles.forEach(function (indicator, ind) {
     indicator.addEventListener('click', function () {
 
         // ind is the index of the currently cliccked li circle
-        sectionIndex = ind+2;
+        sectionIndex = ind + 2;
         // choose the currently selected circle and remove the class selected from it
         document.querySelector('.slider-controls .selected').classList.remove('selected');
         // add it to the circle we just clicked
