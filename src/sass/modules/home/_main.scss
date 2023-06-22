@@ -1,5 +1,5 @@
 main {
-    .first_main {
+    .first_section {
         height: fit-content;
 
         .introText {
@@ -11,7 +11,7 @@ main {
         }
     }
 
-    .second_main {
+    .second_section {
         height: fit-content;
 
         .aboutTitle {
@@ -169,9 +169,14 @@ main {
         }
 
         .chefCards {
+            height: fit-content;
             .chef {
                 background-color: white;
                 width: 30vw;
+            }
+            .chef:hover{
+                transform: scale(1.1);
+                transition: all 0.5s;
             }
         }
     }

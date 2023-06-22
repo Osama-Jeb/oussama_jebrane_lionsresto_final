@@ -1,11 +1,14 @@
 header {
+
     // height: fit-content;
     // margin-bottom: 100px;
     nav {
         padding: 20px;
-        // position: fixed;
+        position: fixed;
         width: 100%;
         top: 0;
+        background-color: white;
+        z-index: 11111;
 
         .logo {
             font-size: xx-large;
@@ -21,13 +24,24 @@ header {
 
                 a {
                     text-decoration: none;
+                    display: inline-block;
                     color: gray;
                     font-weight: bold;
                 }
 
-                a:hover {
+                a::after {
+                    content: '';
+                    display: block;
+                    transform: scaleX(0);
+                    border-bottom: 2px solid $chefRed;
+                    transition: transform 0.3s ease;
+                    transform-origin: left;
+                }
+                a:hover{
                     color: black;
-                    text-decoration: underline red;
+                }
+                a:hover::after {
+                    transform: scaleX(1);
                 }
             }
 
@@ -46,13 +60,11 @@ header {
                 .dropdown-content {
                     display: none;
                     position: absolute;
-                    background-color: #f1f1f1;
+                    background-color: $chefGray;
                     min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                     z-index: 1;
 
                     .dropLink {
-                        color: gray;
                         display: block;
                     }
                 }
@@ -89,6 +101,7 @@ header {
     header {
         nav {
             height: fit-content;
+
             ul {
                 position: absolute;
                 width: 100vw;
@@ -97,14 +110,15 @@ header {
                 text-align: center;
                 transition: all .5s;
             }
-        .btnHolder{
-            .hamburger{
-                border: none;
-                outline: none;
-                background-color: transparent;
-                font-size: x-large;
+
+            .btnHolder {
+                .hamburger {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    font-size: x-large;
+                }
             }
-        }
         }
     }
 }

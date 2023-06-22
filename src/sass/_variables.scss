@@ -4,13 +4,16 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 
+$chefRed: #cb1311;
+$chefGray: #eeeeee;
+$chefDark: #201f24;
 
 // for colors
 $custom-color:(
     "oussama" : #110798,
-    "chefRed" : #cb1311,
-    "chefGray" : #eeeeee,
-    "chefDark" : #201f24,
+    "chefRed" : $chefRed,
+    "chefGray" : $chefGray,
+    "chefDark" : $chefDark,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-color);

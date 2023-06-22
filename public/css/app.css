@@ -14230,8 +14230,11 @@ textarea.form-control-lg {
 }
 header nav {
   padding: 20px;
+  position: fixed;
   width: 100%;
   top: 0;
+  background-color: white;
+  z-index: 11111;
 }
 header nav .logo {
   font-size: xx-large;
@@ -14246,12 +14249,23 @@ header nav ul li {
 }
 header nav ul li a {
   text-decoration: none;
+  display: inline-block;
   color: gray;
   font-weight: bold;
 }
+header nav ul li a::after {
+  content: "";
+  display: block;
+  transform: scaleX(0);
+  border-bottom: 2px solid #cb1311;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
 header nav ul li a:hover {
   color: black;
-  text-decoration: underline red;
+}
+header nav ul li a:hover::after {
+  transform: scaleX(1);
 }
 header nav ul .dropdown {
   position: relative;
@@ -14267,13 +14281,11 @@ header nav ul .dropdown .dropbtn {
 header nav ul .dropdown .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #eeeeee;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 header nav ul .dropdown .dropdown-content .dropLink {
-  color: gray;
   display: block;
 }
 header nav ul .dropdown:hover .dropdown-content {
@@ -14313,28 +14325,28 @@ header nav .btnHolder #check {
     font-size: x-large;
   }
 }
-main .first_main {
+main .first_section {
   height: fit-content;
 }
-main .first_main .introText h2, main .first_main .introText .h2 {
+main .first_section .introText h2, main .first_section .introText .h2 {
   font-family: amatic-b;
   font-size: 3rem;
   font-weight: bold;
 }
-main .second_main {
+main .second_section {
   height: fit-content;
 }
-main .second_main .aboutTitle h2, main .second_main .aboutTitle .h2 {
+main .second_section .aboutTitle h2, main .second_section .aboutTitle .h2 {
   font-family: amatic-b;
 }
-main .second_main .about .aboutImg {
+main .second_section .about .aboutImg {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: end;
   width: 50%;
 }
-main .second_main .about .aboutImg .aboutNumber {
+main .second_section .about .aboutImg .aboutNumber {
   position: absolute;
   background-color: white;
   height: fit-content;
@@ -14342,20 +14354,20 @@ main .second_main .about .aboutImg .aboutNumber {
   bottom: 10%;
   text-align: center;
 }
-main .second_main .about .aboutText {
+main .second_section .about .aboutText {
   width: 50%;
 }
-main .second_main .about .aboutText ul {
+main .second_section .about .aboutText ul {
   list-style: url("../img/check-double-solid.svg");
   font-size: larger;
 }
-main .second_main .about .aboutText .aboutVideo {
+main .second_section .about .aboutText .aboutVideo {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .second_main .about .aboutText .aboutVideo button {
+main .second_section .about .aboutText .aboutVideo button {
   position: absolute;
 }
 main .third_section {
@@ -14436,9 +14448,16 @@ main .sixth_section .caro-item .caro-text {
 main .seventh_section .chefTitle h2, main .seventh_section .chefTitle .h2 {
   font-family: amatic-b;
 }
+main .seventh_section .chefCards {
+  height: fit-content;
+}
 main .seventh_section .chefCards .chef {
   background-color: white;
   width: 30vw;
+}
+main .seventh_section .chefCards .chef:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 main .eigth_section {
   padding: 20px;
