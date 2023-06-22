@@ -223,6 +223,9 @@ main {
 
 
     .tenth_section {
+        height: fit-content;
+        padding: 10px;
+
         .contactInfo {
             .contactPart1 {
                 .contactItem {
@@ -296,11 +299,11 @@ main {
             }
         }
 
-        .tenth_section{
-            .contactInputs{
-                form{
-                    .nameEmail{
-                        input{
+        .tenth_section {
+            .contactInputs {
+                form {
+                    .nameEmail {
+                        input {
                             width: 100%;
                         }
                     }

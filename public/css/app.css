@@ -14468,6 +14468,10 @@ main .eigth_section .booking-inputs form div textarea {
   width: 95%;
   padding: 10px;
 }
+main .tenth_section {
+  height: fit-content;
+  padding: 10px;
+}
 main .tenth_section .contactInfo .contactPart1 .contactItem {
   width: 49%;
   padding: 15px;
@@ -14513,6 +14517,12 @@ main .tenth_section .contactInputs form textarea {
   main .tenth_section .contactInputs form .nameEmail input {
     width: 100%;
   }
+}
+footer .footerInfo div {
+  width: 30%;
+}
+footer .footerInfo div div {
+  width: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */
