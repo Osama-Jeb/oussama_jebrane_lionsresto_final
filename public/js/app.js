@@ -71,3 +71,32 @@ for (let index = 0; index < watchVidBtns.length; index++) {
         }
     }
 }
+
+// GALLERY CAROUSEL
+// ALL MY IMAGES
+const slider = document.querySelector(".slider");
+
+// just a placeholder for later use
+let sectionIndex = 0;
+// how many slides I have
+let numberOfSlide = 12;
+
+// my circly thingies
+let li_circles = document.querySelectorAll(".slider-controls li");
+
+// go through each of my circle indicators
+li_circles.forEach(function (indicator, ind) {
+    // if one of them is clicked then execute the function
+    indicator.addEventListener('click', function () {
+
+        // ind is the index of the currently cliccked li circle
+        sectionIndex = ind+2;
+        // choose the currently selected circle and remove the class selected from it
+        document.querySelector('.slider-controls .selected').classList.remove('selected');
+        // add it to the circle we just clicked
+        indicator.classList.add('selected');
+        // simple terms: move to the corresponding carousel item
+        slider.style.transform = 'translate(' + (sectionIndex) * -100 / numberOfSlide + '%)';
+    });
+});
+

@@ -15,8 +15,9 @@ main {
                 font-size: 3rem;
                 font-weight: bold;
             }
-            .divMod{
-                .mod{
+
+            .divMod {
+                .mod {
                     z-index: 22222;
                     background-color: black;
                     pointer-events: visible;
@@ -26,6 +27,7 @@ main {
                     transform: translate(-50%, -50%);
                     height: 100%;
                     width: 100%;
+
                     .x {
                         float: right;
                         color: white;
@@ -33,6 +35,7 @@ main {
                         border: none;
                         padding: 10px;
                     }
+
                     .modContent {
                         display: flex;
                         flex-direction: column;
@@ -205,11 +208,13 @@ main {
 
         .chefCards {
             height: fit-content;
+
             .chef {
                 background-color: white;
                 width: 30vw;
             }
-            .chef:hover{
+
+            .chef:hover {
                 transform: scale(1.1);
                 transition: all 0.5s;
             }
@@ -218,6 +223,12 @@ main {
 
     .eigth_section {
         padding: 20px;
+        height: fit-content;
+        .bookTitle{
+            h2{
+                font-family: amatic-b;
+            }
+        }
 
         img {
             width: 33%;
@@ -257,14 +268,103 @@ main {
         }
     }
 
-    // .ninth_section{
+    .ninth_section {
+        height: fit-content;
+        padding: 20px;
 
-    // }
+        .galleryTitle{
+            h2{
+                font-family: amatic-b;
+            }
+        }
+
+        /* container */
+        .caro-holder {
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .carous {
+            border: 5px solid $chefRed;
+            height: 200px;
+            width: 25vw;
+            position: relative;
+            
+            .slider {
+                display: flex;
+                justify-content: start;
+                height: 100%;
+                width: 1200%;
+                transition: all 0.7s;
+    
+                section {
+                    flex-basis: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+            .slider-controls {
+                position: absolute;
+                left: 50%;
+    
+                ul {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    list-style: none;
+                    display: flex;
+                    padding: 0;
+                    margin: 0;
+    
+                    li {
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid gray;
+                        border-radius: 50%;
+                        margin: 3px;
+                        background: gray;
+                        cursor: pointer;
+                    }
+    
+                    li.selected {
+                        background: #f54343;
+                    }
+                }
+            }
+        }
+        @media (min-width: 375px) and (max-width: 425px) {
+            .carous {
+                width: 80vw;
+            }
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            .carous {
+                width: 50vw;
+            }
+        }
+
+
+
+    }
 
 
     .tenth_section {
         height: fit-content;
-        padding: 10px;
+        padding: 20px;
+
+        .contactTitle{
+            h2{
+                font-family: amatic-b;
+            }
+        }
 
         .contactInfo {
             .contactPart1 {

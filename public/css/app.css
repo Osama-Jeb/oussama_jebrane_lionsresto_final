@@ -14494,6 +14494,10 @@ main .seventh_section .chefCards .chef:hover {
 }
 main .eigth_section {
   padding: 20px;
+  height: fit-content;
+}
+main .eigth_section .bookTitle h2, main .eigth_section .bookTitle .h2 {
+  font-family: amatic-b;
 }
 main .eigth_section img {
   width: 33%;
@@ -14520,9 +14524,85 @@ main .eigth_section .booking-inputs form div textarea {
   width: 95%;
   padding: 10px;
 }
+main .ninth_section {
+  height: fit-content;
+  padding: 20px;
+  /* container */
+}
+main .ninth_section .galleryTitle h2, main .ninth_section .galleryTitle .h2 {
+  font-family: amatic-b;
+}
+main .ninth_section .caro-holder {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+main .ninth_section .carous {
+  border: 5px solid #cb1311;
+  height: 200px;
+  width: 25vw;
+  position: relative;
+}
+main .ninth_section .carous .slider {
+  display: flex;
+  justify-content: start;
+  height: 100%;
+  width: 1200%;
+  transition: all 0.7s;
+}
+main .ninth_section .carous .slider section {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+main .ninth_section .carous .slider section img {
+  height: 100%;
+  width: 100%;
+}
+main .ninth_section .carous .slider-controls {
+  position: absolute;
+  left: 50%;
+}
+main .ninth_section .carous .slider-controls ul {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+main .ninth_section .carous .slider-controls ul li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  margin: 3px;
+  background: gray;
+  cursor: pointer;
+}
+main .ninth_section .carous .slider-controls ul li.selected {
+  background: #f54343;
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  main .ninth_section .carous {
+    width: 80vw;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  main .ninth_section .carous {
+    width: 50vw;
+  }
+}
 main .tenth_section {
   height: fit-content;
-  padding: 10px;
+  padding: 20px;
+}
+main .tenth_section .contactTitle h2, main .tenth_section .contactTitle .h2 {
+  font-family: amatic-b;
 }
 main .tenth_section .contactInfo .contactPart1 .contactItem {
   width: 49%;
