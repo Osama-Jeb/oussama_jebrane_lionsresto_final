@@ -14486,7 +14486,6 @@ main .fifth_section .menuTitle h2, main .fifth_section .menuTitle .h2 {
 main .sixth_section {
   height: fit-content;
   padding: 20px;
-  /* container */
 }
 main .sixth_section .caro-holder2 {
   overflow-x: hidden;
@@ -14601,7 +14600,6 @@ main .eigth_section .booking-inputs form div textarea {
 main .ninth_section {
   height: fit-content;
   padding: 20px;
-  /* container */
 }
 main .ninth_section .galleryTitle h2, main .ninth_section .galleryTitle .h2 {
   font-family: amatic-b;

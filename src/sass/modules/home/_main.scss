@@ -1,9 +1,11 @@
+//! Add this if you want to make the body UNCLICKABLE
 // .body {
 //     pointer-events: none;
 //     overflow: hidden;
 //     height: 100%;
 // }
 
+//! Kept this out to make sure it targets the modal wherever it was
 .mod {
     z-index: 22222;
     pointer-events: visible;
@@ -30,6 +32,7 @@
         height: 80%;
         width: 100%;
 
+        // To make the background darker when the modal shows
         .forBg {
             background-color: black;
             opacity: 0.8;
@@ -60,10 +63,6 @@ main {
                 font-size: 3rem;
                 font-weight: bold;
             }
-
-            // .divMod {
-
-            // }
         }
     }
 
@@ -98,6 +97,7 @@ main {
                 width: 50%;
 
                 ul {
+                    // the unordered list icons can be changed to anything with this
                     list-style: url("../img/check-double-solid.svg");
                     font-size: larger;
                 }
@@ -112,6 +112,7 @@ main {
                         position: absolute;
                     }
 
+                    // make video look like glowing
                     button:hover {
                         box-shadow: 0px 0px 20px 5px $chefRed;
                     }
@@ -202,7 +203,6 @@ main {
         height: fit-content;
         padding: 20px;
 
-        /* container */
         .caro-holder2 {
             overflow-x: hidden;
 
@@ -363,8 +363,6 @@ main {
                 font-family: amatic-b;
             }
         }
-
-        /* container */
         .caro-holder {
             overflow-x: hidden;
 

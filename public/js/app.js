@@ -1,11 +1,11 @@
-//TODO add comments about this later
+//* Burger Icon
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
 const closeIcon = document.querySelector(".closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
 
-function toggleMenu() {
+const toggleMenu = () => {
     if (menu.classList.contains("showMenu")) {
         menu.classList.remove("showMenu");
         closeIcon.style.display = "none";
@@ -16,8 +16,9 @@ function toggleMenu() {
         menuIcon.style.display = "none";
     }
 }
-
+// show or hide the menu when we click the icon
 hamburger.addEventListener("click", toggleMenu);
+// hide the menu when we click on a nav link
 menuItems.forEach(
     function (menuItem) {
         menuItem.addEventListener("click", toggleMenu);
@@ -26,64 +27,55 @@ menuItems.forEach(
 
 
 
-
+//* Video Modals
 let btnOpen = document.querySelectorAll(".btnOpen");
 let myMod = document.querySelectorAll(".mod");
 let btnClose = document.querySelectorAll(".closeMod");
-
 let myBod = document.body;
-
+// My videos
 let yt = document.querySelectorAll(".ytVidFrame");
 
-// opening our mod
+// opening our mod and autoplaying the video
 const openVid = (param, ytvid) => {
     param.classList.remove("d-none");
     myBod.classList.add("body");
     ytvid.src += "?autoplay=1";
 }
-// closing our mod
+// closing our mod and removing the autoplay function to stop the video 
 const closeVid = (param, ytvid) => {
     param.classList.add("d-none");
     myBod.classList.remove("body");
     ytvid.src = ytvid.src.slice(0, -11);
 }
 
-
-// loop through all buttons that have openmod
+//& Same Logic as a normal modal from the authentification exercice
 for (let index = 0; index < btnOpen.length; index++) {
-    // take the current button
     let currentbtnOpen = btnOpen[index];
-
-    // take the id of the current button
-    let idCurrentbtnOpen = currentbtnOpen.getAttribute("id");
+    let idCurrentbtnOpen = currentbtnOpen.id;
 
     for (let idx = 0; idx < myMod.length; idx++) {
-        // take the current div
         let currentMod = myMod[idx]
+        let idcurrentMod = currentMod.id;
 
-        // take the id of the current div
-        let idcurrentMod = currentMod.getAttribute("id");
-
-        // to ensure we show the content of the same button we clicked
         if (idCurrentbtnOpen == idcurrentMod) {
             // ! added for vid
+            // loop through each video
             for (let i = 0; i < yt.length; i++) {
                 let vid = yt[i];
                 let idVid = vid.id;
+                // if our modal div has the same id as the video inside it
                 if (idcurrentMod == idVid) {
+                    // call the function
                     currentbtnOpen.addEventListener("click", () => {
                         openVid(currentMod, vid);
                     })
                 }
 
                 for (let i = 0; i < btnClose.length; i++) {
-                    // take the current Close button
                     let currentBtnClose = btnClose[i];
+                    let idCurrentBtnClose = currentBtnClose.id;
 
-                    // take the id of the current close button
-                    let idCurrentBtnClose = currentBtnClose.getAttribute("id");
-
-                    // if we click the closing button of the same mod then exit from it
+                    // check if our closing button and modal and video have the same id
                     if (idCurrentBtnClose == idcurrentMod && idcurrentMod == idVid) {
                         currentBtnClose.addEventListener("click", () => {
                             closeVid(currentMod, vid)
@@ -131,28 +123,23 @@ window.onload = function () {
 }
 
 //* EVENTS CAROUSEL
-//// SAME AS THE ONE ABOVE. 
-
+//// SAME AS THE ONE ABOVE. NEED TO FIND A BETTER METHOD to select all carousels
 let slider2 = document.querySelector(".slider2");
 let sectionIndex2 = 0;
 let numberOfSlide2 = 7;
 let li_circles2 = document.querySelectorAll(".slider-controls2 li");
 li_circles2.forEach(function (indicator2, ind) {
-    // if one of them is clicked then execute the function
     indicator2.addEventListener('click', function () {
-
-        // ind is the index of the currently cliccked li circle
         sectionIndex2 = ind + 2;
-        // choose the currently selected circle and remove the class selected from it
         document.querySelector('.slider-controls2 .selected2').classList.remove('selected2');
-        // add it to the circle we just clicked
         indicator2.classList.add('selected2');
-        // simple terms: move to the corresponding carousel item
         slider2.style.transform = 'translate(' + (sectionIndex2) * -100 / numberOfSlide2 + '%)';
     });
 });
 
 
+//* MODAL FOR SIGN UP / LOG IN / DISCONNECT
+//// Similar to the Authentification exercice. Had to adapt some things for this project
 let openCnx = document.querySelectorAll(".openCnx");
 let cnxMod = document.querySelectorAll(".cnxMod");
 let closeCnx = document.querySelectorAll(".closeCnx");
@@ -164,18 +151,18 @@ const close = (param) => {
 }
 for (let index = 0; index < openCnx.length; index++) {
     let currentopenCnx = openCnx[index];
-    let idCurrentopenCnx = currentopenCnx.getAttribute("id");
+    let idCurrentopenCnx = currentopenCnx.id;
 
     for (let idx = 0; idx < cnxMod.length; idx++) {
         let currentDiv = cnxMod[idx]
-        let idCurrentDiv = currentDiv.getAttribute("id");
+        let idCurrentDiv = currentDiv.id;
         if (idCurrentopenCnx == idCurrentDiv) {
             currentopenCnx.addEventListener("click", open.bind(null, currentDiv))
         }
 
         for (let i = 0; i < closeCnx.length; i++) {
             let currentcloseCnx = closeCnx[i];
-            let idCurrentcloseCnx = currentcloseCnx.getAttribute("id");
+            let idCurrentcloseCnx = currentcloseCnx.id;
             if (idCurrentcloseCnx == idCurrentDiv) {
                 currentcloseCnx.addEventListener("click", close.bind(null, currentDiv))
             }
@@ -184,6 +171,7 @@ for (let index = 0; index < openCnx.length; index++) {
 }
 
 //******
+//// Same as the Authentification Exercice. Didn't change anything
 let signName = document.querySelector("#signName");
 let signEmail = document.querySelector("#signEmail");
 let signPassword = document.querySelector("#signPassword");

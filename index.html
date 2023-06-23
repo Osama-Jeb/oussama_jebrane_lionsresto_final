@@ -11,13 +11,16 @@
 
 <body>
 
+    <!--* HEADER -->
     <header>
+        <!-- Anchor for going to the top of the page -->
         <div class="anchor">
             <a href="#top">
                 <i class="fa-solid fa-arrow-up fa-2xl" style="color: #ffffff;"></i>
             </a>
         </div>
 
+        <!-- Nav Bar -->
         <nav class="d-flex justify-content-between align-items-center">
             <div class="logo">
                 <a href="#top" class="text-decoration-none text-black">
@@ -43,6 +46,7 @@
                 <li class="link menuItem">
                     <a href="#ninth_section">Gallery</a>
                 </li>
+                <!-- Hover dropdown menu -->
                 <li class="link">
                     <div href="" class="dropdown">
                         <button name="" id="" class="dropbtn"> Drop Down &#9661;</button>
@@ -61,9 +65,11 @@
             </ul>
 
             <div class="btnHolder d-flex gap-2">
+                <!--^ Button for Sign Up Modals -->
                 <button id="modCnx" class="btnOpen btn btn-danger rounded-pill">
                     Connexion
                 </button>
+                <!-- Buttons for Burger Menu -->
                 <button class="d-block d-lg-none hamburger">
                     <i class="menuIcon fa-solid fa-grip-lines"></i>
                     <i class="closeIcon fa-solid fa-x"></i>
@@ -72,128 +78,132 @@
         </nav>
     </header>
 
-    <!--: REMEMEBR THIS -->
-    <!-- My Modals -->
-    <!--^ First video modal -->
-    <section class="d-none mod" id="modVid1">
-        <button class="closeMod x" id="modVid1"> X </button>
 
-        <div class="modContent" id="modVid1">
-            <div class="forBg"></div>
-            <iframe class="ytVidFrame" id="modVid1" width="560" height="315"
-                src="https://www.youtube.com/embed/i5T6Fnbq34c" allow="autoplay" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-
-    <!--^^ Second video modal -->
-    <section class="d-none mod" id="modVid2">
-        <button class="closeMod x" id="modVid2"> X </button>
-
-        <div class="modContent" id="modVid2">
-            <div class="forBg"></div>
-            <iframe class="ytVidFrame" id="modVid2" width="560" height="315"
-                src="https://www.youtube.com/embed/UH39X0oJUmQ" allow="autoplay" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-
-    <!-- ^^ mod testing for cnx -->
-    <section class="d-none mod" id="modCnx">
-        <button class="closeMod x" id="modCnx">
-            <i class="fa-solid fa-x"></i>
-        </button>
-
-        <div class="modContent" id="modCnx">
-            <div class="forBg"></div>
-            <div class="ytVidFrame w-25" id="modCnx">
-
-                <div class="holder d-flex justify-content-evenly align-items-center">
-                    <!-- SIGN IN cnxMod -->
-                    <div class="signed">
-                        <button class="openCnx btn btn-chefRed rounded-pill" id="cnxMod1"> SIGN IN </button>
-                        <div class="d-none cnxMod signUp" id="cnxMod1">
-                            <button class="closeCnx ex btn btn-chefGray" id="cnxMod1">
-                                <i class="closeIcon fa-solid fa-x"></i>
-                            </button>
-
-                            <div class="cnxModContent" id="cnxMod1">
-                                <form action="" class="d-flex flex-column align-items-center justify-content-center">
-                                    <input type="text" placeholder="Name" id="signName">
-                                    <input type="text" placeholder="Email" id="signEmail">
-                                    <input type="password" placeholder="Password" id="signPassword">
-                                    <input type="password" placeholder="Confirm Pasword" id="signConfirmPw">
-                                </form>
-                                <div class="pb-5">
-                                    <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Sign In" id="inputSign">
-                                    <input class=" btn btn-chefRed border-0" type="submit" value="Show" id="signShow">
-                                </div>
-                            </div>
-
-                            <button class="closeCnx close btn btn-chefDark" id="cnxMod1"> CLOSE </button>
-                        </div>
-                    </div>
-
-                    <!-- LOG IN cnxMod -->
-                    <div class="signed">
-                        <button class="openCnx btn btn-chefRed rounded-pill" id="cnxMod2"> LOG IN </button>
-                        <div class="d-none cnxMod " id="cnxMod2">
-                            <button class="closeCnx ex btn btn-chefGray" id="cnxMod2">
-                                <i class="closeIcon fa-solid fa-x"></i>
-                            </button>
-
-                            <div class="cnxModContent" id="cnxMod2">
-                                <form action="" class="d-flex flex-column align-items-center justify-content-center">
-                                    <input type="text" placeholder="Email" id="logEmail">
-                                    <input type="password" placeholder="Password" id="logPassword">
-                                </form>
-                                <div class="pb-5">
-                                    <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Log In" id="inputLog">
-                                    <input class="btn btn-chefRed border-0" type="submit" value="Show" id="logShow">
-                                </div>
-                            </div>
-
-                            <button class="closeCnx close btn btn-chefDark" id="cnxMod2"> CLOSE </button>
-                        </div>
-                    </div>
-
-                    <!-- SIGN OUT cnxMod -->
-                    <div class="d-none" id="disco">
-                        <button id="discoBtn" class="openCnx btn btn-chefRed rounded-pill">SIGN OUT</button>
-                    </div>
-
-
-                </div>
-
+    <!--* ALL My Modals -->
+    <div class="all_Modals">
+        <!--^ First video modal -->
+        <section class="d-none mod" id="modVid1">
+            <button class="closeMod x" id="modVid1"> X </button>
+            <div class="modContent" id="modVid1">
+                <div class="forBg"></div>
+                <iframe class="ytVidFrame" id="modVid1" width="560" height="315"
+                    src="https://www.youtube.com/embed/i5T6Fnbq34c" allow="autoplay" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!--^^ Second video modal -->
+        <section class="d-none mod" id="modVid2">
+            <button class="closeMod x" id="modVid2"> X </button>
+
+            <div class="modContent" id="modVid2">
+                <div class="forBg"></div>
+                <iframe class="ytVidFrame" id="modVid2" width="560" height="315"
+                    src="https://www.youtube.com/embed/UH39X0oJUmQ" allow="autoplay" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- ^^ Sign Up & Log In Modals: From the Authentication Exercice -->
+        <section class="d-none mod" id="modCnx">
+            <button class="closeMod x" id="modCnx">
+                <i class="fa-solid fa-x"></i>
+            </button>
+
+            <div class="modContent" id="modCnx">
+                <div class="forBg"></div>
+                <div class="ytVidFrame w-25" id="modCnx">
+
+                    <div class="holder d-flex justify-content-evenly align-items-center">
+                        <!--& SIGN IN cnxMod -->
+                        <div class="signed">
+                            <button class="openCnx btn btn-chefRed rounded-pill" id="cnxMod1"> SIGN UP </button>
+                            <div class="d-none cnxMod signUp" id="cnxMod1">
+                                <button class="closeCnx ex btn btn-chefGray" id="cnxMod1">
+                                    <i class="closeIcon fa-solid fa-x"></i>
+                                </button>
+
+                                <div class="cnxModContent" id="cnxMod1">
+                                    <form action=""
+                                        class="d-flex flex-column align-items-center justify-content-center">
+                                        <input type="text" placeholder="Name" id="signName">
+                                        <input type="text" placeholder="Email" id="signEmail">
+                                        <input type="password" placeholder="Password" id="signPassword">
+                                        <input type="password" placeholder="Confirm Pasword" id="signConfirmPw">
+                                    </form>
+                                    <div class="pb-5">
+                                        <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Sign In"
+                                            id="inputSign">
+                                        <input class=" btn btn-chefRed border-0" type="submit" value="Show"
+                                            id="signShow">
+                                    </div>
+                                </div>
+                                <button class="closeCnx close btn btn-chefDark" id="cnxMod1"> CLOSE </button>
+                            </div>
+                        </div>
+
+                        <!--& LOG IN cnxMod -->
+                        <div class="signed">
+                            <button class="openCnx btn btn-chefRed rounded-pill" id="cnxMod2"> LOG IN </button>
+                            <div class="d-none cnxMod " id="cnxMod2">
+                                <button class="closeCnx ex btn btn-chefGray" id="cnxMod2">
+                                    <i class="closeIcon fa-solid fa-x"></i>
+                                </button>
+
+                                <div class="cnxModContent" id="cnxMod2">
+                                    <form action=""
+                                        class="d-flex flex-column align-items-center justify-content-center">
+                                        <input type="text" placeholder="Email" id="logEmail">
+                                        <input type="password" placeholder="Password" id="logPassword">
+                                    </form>
+                                    <div class="pb-5">
+                                        <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Log In"
+                                            id="inputLog">
+                                        <input class="btn btn-chefRed border-0" type="submit" value="Show" id="logShow">
+                                    </div>
+                                </div>
+                                <button class="closeCnx close btn btn-chefDark" id="cnxMod2"> CLOSE </button>
+                            </div>
+                        </div>
+
+                        <!--& SIGN OUT cnxMod -->
+                        <div class="d-none" id="disco">
+                            <button id="discoBtn" class="openCnx btn btn-chefRed rounded-pill">SIGN OUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!--* MAIN -->
     <main>
+        <!--- First Section -->
         <div id="first_section"
             class="first_section bg-chefGray d-flex flex-column-reverse flex-lg-row align-items-center justify-content-around">
 
             <div class="introText text-center text-lg-start">
                 <h2>Enjoy your healthy decilicious food</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, totam?</p>
+
                 <div class="divMod d-flex gap-2 justify-content-center justify-content-lg-start">
                     <a href="#eigth_section">
                         <button class="btn btn-chefRed rounded-pill">
                             Book a Table
                         </button>
                     </a>
-
+                    <!--^^ Button To Open The First Video Modal -->
                     <button class="btnOpen btn bg-transparent" id="modVid1">
                         <i class="fa-solid fa-circle-play text-chefRed"></i>
                         Watch Video
                     </button>
-
                 </div>
             </div>
 
@@ -202,6 +212,7 @@
             </div>
         </div>
 
+        <!--- Second Section: About Us -->
         <div class="second_section p-2" id="second_section">
 
             <div class="aboutTitle text-center">
@@ -240,6 +251,7 @@
 
                     <div class="aboutVideo w-100">
                         <img src="./public/img/about-2.jpg" class="w-100" alt="">
+                        <!-- ^^ Button for Second Video Modal -->
                         <button class="btnOpen btn btn-chefRed rounded-circle p-4" id="modVid2">
                             <i class="fa-solid fa-circle-play fa-2xl"></i>
                         </button>
@@ -250,6 +262,7 @@
 
 
 
+        <!--- Third Section: Why Choose LionsResto -->
         <div id="third_section" class="third_section bg-chefGray d-flex flex-column flex-lg-row gap-3 p-5">
 
             <div class="why p-3">
@@ -263,6 +276,7 @@
                 </div>
             </div>
 
+            <!-- Reasons Cards -->
             <div class="reasons d-flex flex-column flex-lg-row align-items-center gap-3">
                 <div class="reason d-flex flex-column align-items-center bg-light p-5 gap-4 text-center">
                     <i class="fa-solid fa-clipboard-list fa-lg text-chefRed"></i>
@@ -285,10 +299,14 @@
             </div>
         </div>
 
+
+        <!--- Fourth Section: Stats -->
         <div id="fourth_section" class="fourth_section">
-            <div class="black">
-            </div>
+            <!-- For Black filter -->
+            <div class="black"></div>
+
             <div class="stats d-flex flex-wrap flex-lg-nowrap text-center justify-content-around gap-5 p-3">
+                <!-- 2 divs for the tablette responsivity -->
                 <div class="firstStats d-flex flex-column flex-md-row justify-content-around align-items-center w-50">
                     <div>
                         <h2>232</h2>
@@ -314,8 +332,8 @@
         </div>
 
 
-        <!--+ Tab list ?? -->
 
+        <!--- Fifth Section: Menu Tab List -->
         <div id="fifth_section" class="fifth_section p-5">
 
             <div class="menuTitle text-center">
@@ -323,8 +341,8 @@
                 <h2>CHECK OUR <span class="text-chefRed">LIONSRESTO MENU</span></h2>
             </div>
 
-
             <div class="tabList">
+                <!-- Tab Titles -->
                 <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active text-chefRed" id="starter-tab" data-bs-toggle="tab"
@@ -348,6 +366,7 @@
                     </li>
                 </ul>
 
+                <!-- Tab Items -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="starter-tab-pane" role="tabpanel"
                         aria-labelledby="starter-tab" tabindex="0">
@@ -574,13 +593,14 @@
             </div>
         </div>
 
-        <!-- Events -->
-        <!--: CAROUSEL -->
-        <!--! NEEDS TO BE RE-DONE -->
+
+        <!--- Sixth Section: Events Carousel -->
         <div id="sixth_section" class="sixth_section p-4">
             <div class="caro-holder2 d-flex justify-content-center">
                 <div class="carous2">
                     <div class="slider2 d-flex justify-content-start">
+                        <!-- Each section is an Image -->
+                        <!-- There are more images than normal because of style -->
                         <section>
                             <img src="./public/img/events-2.jpg" alt="">
                             <div class="caro-text">
@@ -652,6 +672,7 @@
                             </div>
                         </section>
                     </div>
+                    <!-- Select which image to be in center -->
                     <div class="slider-controls2 position-absolute start-50">
                         <ul class="position-absolute start-50 d-flex list-unstyled p-0 m-0">
                             <li class="selected2"></li>
@@ -665,9 +686,7 @@
         </div>
 
 
-
-
-
+        <!--- Seventh Section: our Chefs Cards -->
         <div id="seventh_section" class="seventh_section">
             <div class="chefTitle text-center">
                 <p>OUR CHEFS</p>
@@ -708,7 +727,7 @@
         </div>
 
 
-        <!-- BOOKING FORM -->
+        <!--- Eigth Section: Booking Form -->
         <div id="eigth_section" class="eigth_section">
             <div class="bookTitle text-center">
                 <p>BOOK A TABLE</p>
@@ -739,13 +758,13 @@
             </div>
         </div>
 
-        <!-- GALLERY -->
+        <!--- Ninth Section: Gallery Carousel -->
         <div id="ninth_section" class="ninth_section">
             <div class="galleryTitle text-center">
                 <p>GALLERY</p>
                 <h2>CHECK <span class="text-chefRed">OUR GALLERY</span></h2>
             </div>
-            <!-- ! TODO ADD CAROUSEL IN JS -->
+            <!-- Same thing as Evenets -->
             <div class="caro-holder d-flex justify-content-center">
                 <div class="carous">
                     <div class="slider d-flex justify-content-start">
@@ -803,8 +822,7 @@
         </div>
 
 
-        <!-- Contact -->
-
+        <!--- Tenth Section: Contact Map and Form -->
         <div id="tenth_section" class="tenth_section">
             <div class="contactTitle text-center">
                 <p>Contact</p>
@@ -878,8 +896,7 @@
 
 
 
-    <!--+ Footer -->
-
+    <!--* FOOTER -->
 
     <footer class="text-secondary bg-chefDark">
         <div class="footerInfo p-4 gap-3 d-flex flex-column flex-md-row justify-content-around">
@@ -913,6 +930,7 @@
                     </div>
                 </div>
 
+                <!--+ Social Media Icons -->
                 <div class="footerItem d-flex gap-3 mt-3 mt-md-0">
                     <div class="d-flex flex-column">
                         <p class="text-white"><b>Follow Us</b></p>
@@ -934,6 +952,7 @@
                 </div>
             </div>
         </div>
+
         <hr>
         <div class="copyrights p-5 d-flex align-items-center justify-content-center">
             <p> &#169; copyright <b class="text-white">LionsResto.</b> All Rights Reserved.</p>
