@@ -61,7 +61,7 @@
             </ul>
 
             <div class="btnHolder d-flex gap-2">
-                <button class="btn btn-danger rounded-pill">
+                <button id="modCnx" class="btnOpen btn btn-danger rounded-pill">
                     Connexion
                 </button>
                 <button class="d-block d-lg-none hamburger">
@@ -101,6 +101,77 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
             </iframe>
+        </div>
+    </section>
+
+    <!-- ^^ mod testing for cnx -->
+    <section class="d-none mod" id="modCnx">
+        <button class="closeMod x" id="modCnx">
+            <i class="fa-solid fa-x"></i>
+        </button>
+
+        <div class="modContent" id="modCnx">
+            <div class="forBg"></div>
+            <div class="ytVidFrame w-25" id="modCnx">
+
+                <div class="holder d-flex justify-content-evenly align-items-center">
+                    <!-- SIGN IN cnxMod -->
+                    <div class="signed">
+                        <button class="openCnx btn btn-chefRed rounded-pill" id="cnxMod1"> SIGN IN </button>
+                        <div class="d-none cnxMod signUp" id="cnxMod1">
+                            <button class="closeCnx ex btn btn-chefGray" id="cnxMod1">
+                                <i class="closeIcon fa-solid fa-x"></i>
+                            </button>
+
+                            <div class="cnxModContent" id="cnxMod1">
+                                <form action="" class="d-flex flex-column align-items-center justify-content-center">
+                                    <input type="text" placeholder="Name" id="signName">
+                                    <input type="text" placeholder="Email" id="signEmail">
+                                    <input type="password" placeholder="Password" id="signPassword">
+                                    <input type="password" placeholder="Confirm Pasword" id="signConfirmPw">
+                                </form>
+                                <div class="pb-5">
+                                    <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Sign In" id="inputSign">
+                                    <input class=" btn btn-chefRed border-0" type="submit" value="Show" id="signShow">
+                                </div>
+                            </div>
+
+                            <button class="closeCnx close btn btn-chefDark" id="cnxMod1"> CLOSE </button>
+                        </div>
+                    </div>
+
+                    <!-- LOG IN cnxMod -->
+                    <div class="signed">
+                        <button class="openCnx btn btn-chefRed rounded-pill" id="cnxMod2"> LOG IN </button>
+                        <div class="d-none cnxMod " id="cnxMod2">
+                            <button class="closeCnx ex btn btn-chefGray" id="cnxMod2">
+                                <i class="closeIcon fa-solid fa-x"></i>
+                            </button>
+
+                            <div class="cnxModContent" id="cnxMod2">
+                                <form action="" class="d-flex flex-column align-items-center justify-content-center">
+                                    <input type="text" placeholder="Email" id="logEmail">
+                                    <input type="password" placeholder="Password" id="logPassword">
+                                </form>
+                                <div class="pb-5">
+                                    <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Log In" id="inputLog">
+                                    <input class="btn btn-chefRed border-0" type="submit" value="Show" id="logShow">
+                                </div>
+                            </div>
+
+                            <button class="closeCnx close btn btn-chefDark" id="cnxMod2"> CLOSE </button>
+                        </div>
+                    </div>
+
+                    <!-- SIGN OUT cnxMod -->
+                    <div class="d-none" id="disco">
+                        <button id="discoBtn" class="openCnx btn btn-chefRed rounded-pill">SIGN OUT</button>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>
     </section>
 

@@ -14688,6 +14688,42 @@ main .tenth_section .contactInputs form textarea {
   padding: 10px;
 }
 
+.holder .signed .cnxMod {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
+  background-color: #eeeeee;
+  pointer-events: visible;
+  text-align: center;
+}
+.holder .signed .cnxMod .ex {
+  margin-left: 75%;
+}
+.holder .signed .cnxMod .ex:hover {
+  background-color: #cb1311 !important;
+  color: white !important;
+}
+.holder .signed .cnxMod .cnxModContent {
+  height: 80%;
+  width: 100%;
+}
+.holder .signed .cnxMod .cnxModContent input {
+  border: gray solid 2px;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 4px;
+}
+.holder .signed .cnxMod .close {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+}
+
 @media (min-width: 375px) and (max-width: 768px) {
   main .second_section .about .aboutImg {
     width: 100%;

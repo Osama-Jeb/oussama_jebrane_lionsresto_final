@@ -48,15 +48,6 @@ const closeVid = (param, ytvid) => {
     ytvid.src = ytvid.src.slice(0, -11);
 }
 
-const open = (param) => {
-    param.classList.remove("d-none");
-    myBod.classList.add("body");
-}
-
-const close = (param) => {
-    param.classList.add("d-none");
-    myBod.classList.remove("body");
-}
 
 // loop through all buttons that have openmod
 for (let index = 0; index < btnOpen.length; index++) {
@@ -75,6 +66,7 @@ for (let index = 0; index < btnOpen.length; index++) {
 
         // to ensure we show the content of the same button we clicked
         if (idCurrentbtnOpen == idcurrentMod) {
+            // ! added for vid
             for (let i = 0; i < yt.length; i++) {
                 let vid = yt[i];
                 let idVid = vid.id;
@@ -159,3 +151,179 @@ li_circles2.forEach(function (indicator2, ind) {
         slider2.style.transform = 'translate(' + (sectionIndex2) * -100 / numberOfSlide2 + '%)';
     });
 });
+
+
+let openCnx = document.querySelectorAll(".openCnx");
+let cnxMod = document.querySelectorAll(".cnxMod");
+let closeCnx = document.querySelectorAll(".closeCnx");
+const open = (param) => {
+    param.classList.remove("d-none");
+}
+const close = (param) => {
+    param.classList.add("d-none");
+}
+for (let index = 0; index < openCnx.length; index++) {
+    let currentopenCnx = openCnx[index];
+    let idCurrentopenCnx = currentopenCnx.getAttribute("id");
+
+    for (let idx = 0; idx < cnxMod.length; idx++) {
+        let currentDiv = cnxMod[idx]
+        let idCurrentDiv = currentDiv.getAttribute("id");
+        if (idCurrentopenCnx == idCurrentDiv) {
+            currentopenCnx.addEventListener("click", open.bind(null, currentDiv))
+        }
+
+        for (let i = 0; i < closeCnx.length; i++) {
+            let currentcloseCnx = closeCnx[i];
+            let idCurrentcloseCnx = currentcloseCnx.getAttribute("id");
+            if (idCurrentcloseCnx == idCurrentDiv) {
+                currentcloseCnx.addEventListener("click", close.bind(null, currentDiv))
+            }
+        }
+    }
+}
+
+//******
+let signName = document.querySelector("#signName");
+let signEmail = document.querySelector("#signEmail");
+let signPassword = document.querySelector("#signPassword");
+let signConfirm = document.querySelector("#signConfirmPw");
+let submit = document.querySelector("#inputSign");
+let showPass = document.querySelector("#signShow");
+
+let signMod = document.querySelector(".signUp")
+
+class User {
+    constructor(name, email, password) {
+        this.name = name;
+        this.email = email;
+        this.password = password
+    }
+}
+
+let myUsers = [];
+
+const register = () => {
+    let userName = signName.value;
+    let userEmail;
+    let userPassword;
+    let valid = 0;
+
+    if (signEmail.value.includes("@")) {
+        if (myUsers.length == 0) {
+            userEmail = signEmail.value;
+            valid++;
+        } else {
+            for (let index = 0; index < myUsers.length; index++) {
+                let element = myUsers[index];
+                if (element.email == signEmail.value) {
+                    alert("This Email Already Exists");
+                } else {
+                    userEmail = signEmail.value;
+                    valid++;
+                }
+            }
+        }
+
+    } else {
+        signEmail.placeholder = "Not a valid email";
+        signEmail.value = "";
+        signEmail.style.border = "2px solid red";
+    }
+
+    if (signPassword.value != signConfirm.value || signPassword.value == "") {
+        signPassword.value = "";
+        signConfirm.placeholder = "Not a valid password";
+        signConfirm.value = "";
+        signConfirm.style.border = "2px solid red";
+    } else {
+        userPassword = signPassword.value;
+        valid++;
+    }
+
+    if (valid == 2) {
+        let person = new User(userName, userEmail, userPassword);
+        myUsers.push(person);
+        close(signMod);
+    }
+    console.log(myUsers);
+}
+
+
+submit.addEventListener("click", register);
+
+
+const signShow = () => {
+    if (signPassword.type == "password") {
+        signPassword.setAttribute("type", "text");
+        signConfirm.setAttribute("type", "text");
+    } else {
+        signPassword.setAttribute("type", "password");
+        signConfirm.setAttribute("type", "password");
+    }
+}
+
+
+showPass.addEventListener("click", signShow);
+
+
+//++++++++++++++++++++++++
+let logEmail = document.querySelector("#logEmail");
+let logPass = document.querySelector("#logPassword");
+let signIn = document.querySelector("#inputLog");
+let logshow = document.querySelector("#logShow");
+
+let logMod = document.querySelectorAll(".signed");
+
+
+
+const logIn = () => {
+    if (myUsers.length == 0) {
+        alert("There is no Accounts yet!!");
+    } else {
+        for (let index = 0; index < myUsers.length; index++) {
+            let usr = myUsers[index];
+            if (usr.email != logEmail.value) {
+                alert("This Account Does not Exist");
+            } else {
+                if (usr.password != logPass.value) {
+                    alert("Wrong Password");
+                } else {
+                    alert("LOGGED IN");
+
+                    logMod.forEach(element => {
+                        close(element);
+                    });
+
+                    disco.classList.remove("d-none");
+                }
+            }
+        }
+    }
+}
+
+
+// event for logging in 
+signIn.addEventListener("click", logIn);
+
+const logShow = () => {
+    if (logPass.type == "password") {
+        logPass.setAttribute("type", "text");
+    } else {
+        logPass.setAttribute("type", "password");
+    }
+}
+logshow.addEventListener("click", logShow);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++
+let disco = document.querySelector("#disco");
+let discoBtn = document.querySelector("#discoBtn");
+
+const logOut = () => {
+    disco.classList.add("d-none");
+    logMod.forEach(element => {
+        open(element);
+    });
+}
+
+discoBtn.addEventListener("click", logOut);

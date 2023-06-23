@@ -482,6 +482,51 @@ main {
     }
 }
 
+.holder {
+    .signed {
+        .cnxMod {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            height: fit-content;
+            width: fit-content;
+            padding: 20px;
+            background-color: $chefGray;
+            pointer-events: visible;
+            text-align: center;
+
+            .ex {
+                margin-left: 75%;
+            }
+            .ex:hover{
+                background-color: $chefRed !important;
+                color: white !important;
+            }
+
+            .cnxModContent {
+                height: 80%;
+                width: 100%;
+
+                input {
+                    border: gray solid 2px;
+                    border-radius: 15px;
+                    margin: 5px;
+                    padding: 4px;
+                }
+            }
+
+            .close {
+                position: fixed;
+                right: 2%;
+                bottom: 5%;
+            }
+
+        }
+    }
+}
+
 @media (min-width: 375px) and (max-width: 768px) {
     main {
         .second_section {
