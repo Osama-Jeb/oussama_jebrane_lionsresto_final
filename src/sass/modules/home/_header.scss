@@ -89,6 +89,7 @@ header {
 
     }
 }
+
 .showMenu {
     transform: translateX(0);
 }
@@ -112,10 +113,11 @@ header {
                 background-color: $chefGray;
                 list-style: none;
                 padding-top: 2rem;
-                li{
+
+                li {
                     margin-top: 10px;
                 }
-                
+
             }
 
             .btnHolder {

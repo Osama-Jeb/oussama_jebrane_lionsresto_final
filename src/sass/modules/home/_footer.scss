@@ -5,10 +5,20 @@ footer {
                 color: gray;
             }
 
+            i:hover {
+                color: white;
+                transform: scale(1.3);
+                transition: all 1s;
+            }
+
             .social {
                 border-radius: 50%;
                 border: 1px solid gray;
                 padding: 7px;
+            }
+
+            .social:hover {
+                border: 1px solid white;
             }
         }
     }

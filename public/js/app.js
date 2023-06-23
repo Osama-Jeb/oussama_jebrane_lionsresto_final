@@ -27,61 +27,80 @@ menuItems.forEach(
 
 
 
-let watchVidBtns = document.querySelectorAll(".watchVid");
+let btnOpen = document.querySelectorAll(".btnOpen");
 let myMod = document.querySelectorAll(".mod");
 let btnClose = document.querySelectorAll(".closeMod");
 
 let myBod = document.body;
 
-let yt = document.querySelector(".ytVidFrame");
-let ytSrc = yt.src
+let yt = document.querySelectorAll(".ytVidFrame");
 
 // opening our mod
+const openVid = (param, ytvid) => {
+    param.classList.remove("d-none");
+    myBod.classList.add("body");
+    ytvid.src += "?autoplay=1";
+}
+// closing our mod
+const closeVid = (param, ytvid) => {
+    param.classList.add("d-none");
+    myBod.classList.remove("body");
+    ytvid.src = ytvid.src.slice(0, -11);
+}
+
 const open = (param) => {
     param.classList.remove("d-none");
     myBod.classList.add("body");
-    yt.src += "?autoplay=1";
 }
 
-// closing our mod
 const close = (param) => {
     param.classList.add("d-none");
     myBod.classList.remove("body");
-    yt.src = ytSrc
 }
 
 // loop through all buttons that have openmod
-for (let index = 0; index < watchVidBtns.length; index++) {
+for (let index = 0; index < btnOpen.length; index++) {
     // take the current button
-    let currentwatchVidBtns = watchVidBtns[index];
+    let currentbtnOpen = btnOpen[index];
 
     // take the id of the current button
-    let idCurrentwatchVidBtns = currentwatchVidBtns.getAttribute("id");
+    let idCurrentbtnOpen = currentbtnOpen.getAttribute("id");
 
     for (let idx = 0; idx < myMod.length; idx++) {
         // take the current div
-        let currentDiv = myMod[idx]
+        let currentMod = myMod[idx]
 
         // take the id of the current div
-        let idCurrentDiv = currentDiv.getAttribute("id");
+        let idcurrentMod = currentMod.getAttribute("id");
 
         // to ensure we show the content of the same button we clicked
-        if (idCurrentwatchVidBtns == idCurrentDiv) {
-            currentwatchVidBtns.addEventListener("click", open.bind(null, currentDiv))
-        }
+        if (idCurrentbtnOpen == idcurrentMod) {
+            for (let i = 0; i < yt.length; i++) {
+                let vid = yt[i];
+                let idVid = vid.id;
+                if (idcurrentMod == idVid) {
+                    currentbtnOpen.addEventListener("click", () => {
+                        openVid(currentMod, vid);
+                    })
+                }
 
-        for (let i = 0; i < btnClose.length; i++) {
-            // take the current Close button
-            let currentBtnClose = btnClose[i];
+                for (let i = 0; i < btnClose.length; i++) {
+                    // take the current Close button
+                    let currentBtnClose = btnClose[i];
 
-            // take the id of the current close button
-            let idCurrentBtnClose = currentBtnClose.getAttribute("id");
+                    // take the id of the current close button
+                    let idCurrentBtnClose = currentBtnClose.getAttribute("id");
 
-            // if we click the closing button of the same mod then exit from it
-            if (idCurrentBtnClose == idCurrentDiv) {
-                currentBtnClose.addEventListener("click", close.bind(null, currentDiv))
+                    // if we click the closing button of the same mod then exit from it
+                    if (idCurrentBtnClose == idcurrentMod && idcurrentMod == idVid) {
+                        currentBtnClose.addEventListener("click", () => {
+                            closeVid(currentMod, vid)
+                        })
+                    }
+                }
             }
         }
+
     }
 }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LionsResto</title>
     <link rel="stylesheet" href="./public/css/app.css">
 </head>
 
@@ -72,6 +72,37 @@
         </nav>
     </header>
 
+    <!--: REMEMEBR THIS -->
+    <!-- My Modals -->
+    <!--^ First video modal -->
+    <section class="d-none mod" id="modVid1">
+        <button class="closeMod x" id="modVid1"> X </button>
+
+        <div class="modContent" id="modVid1">
+            <div class="forBg"></div>
+            <iframe class="ytVidFrame" id="modVid1" width="560" height="315"
+                src="https://www.youtube.com/embed/i5T6Fnbq34c" allow="autoplay" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!--^^ Second video modal -->
+    <section class="d-none mod" id="modVid2">
+        <button class="closeMod x" id="modVid2"> X </button>
+
+        <div class="modContent" id="modVid2">
+            <div class="forBg"></div>
+            <iframe class="ytVidFrame" id="modVid2" width="560" height="315"
+                src="https://www.youtube.com/embed/UH39X0oJUmQ" allow="autoplay" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
 
     <main>
         <div id="first_section"
@@ -87,23 +118,10 @@
                         </button>
                     </a>
 
-                    <button class="watchVid btn bg-transparent" id="mod1">
+                    <button class="btnOpen btn bg-transparent" id="modVid1">
                         <i class="fa-solid fa-circle-play text-chefRed"></i>
                         Watch Video
                     </button>
-                    <!--: REMEMEBR THIS -->
-                    <div class="d-none mod signUp" id="mod1">
-                        <button class="closeMod x" id="mod1"> X </button>
-
-                        <div class="modContent" id="mod1">
-                            <iframe class="ytVidFrame" width="560" height="315"
-                                src="https://www.youtube.com/embed/RFBDmwFxVr0" allow="autoplay"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -151,7 +169,7 @@
 
                     <div class="aboutVideo w-100">
                         <img src="./public/img/about-2.jpg" class="w-100" alt="">
-                        <button class="watchVid btn btn-chefRed rounded-circle p-4">
+                        <button class="btnOpen btn btn-chefRed rounded-circle p-4" id="modVid2">
                             <i class="fa-solid fa-circle-play fa-2xl"></i>
                         </button>
                     </div>
@@ -828,16 +846,16 @@
                     <div class="d-flex flex-column">
                         <p class="text-white"><b>Follow Us</b></p>
                         <div class="d-flex gap-5">
-                            <a href="https://twitter.com/">
+                            <a href="https://twitter.com/" target="_blank">
                                 <i class="social fa-brands fa-twitter"></i>
                             </a>
-                            <a href="https://www.facebook.com/">
+                            <a href="https://www.facebook.com/" target="_blank">
                                 <i class="social fa-brands fa-facebook"></i>
                             </a>
-                            <a href="https://www.instagram.com/">
+                            <a href="https://www.instagram.com/" target="_blank">
                                 <i class="social fa-brands fa-instagram"></i>
                             </a>
-                            <a href="https://www.linkedin.com/">
+                            <a href="https://www.linkedin.com/" target="_blank">
                                 <i class="social fa-brands fa-linkedin"></i>
                             </a>
                         </div>

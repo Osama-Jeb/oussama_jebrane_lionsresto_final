@@ -1,7 +1,52 @@
-.body {
-    pointer-events: none;
-    overflow: hidden;
+// .body {
+//     pointer-events: none;
+//     overflow: hidden;
+//     height: 100%;
+// }
+
+.mod {
+    z-index: 22222;
+    pointer-events: visible;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 100%;
+    width: 100%;
+
+    .x {
+        float: right;
+        color: white;
+        background-color: black;
+        border: none;
+        padding: 10px;
+    }
+
+    .modContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        width: 100%;
+
+        .forBg {
+            background-color: black;
+            opacity: 0.8;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: 100%;
+            z-index: -22;
+        }
+
+        iframe {
+            position: absolute;
+            z-index: 212121;
+        }
+    }
 }
 
 main {
@@ -16,36 +61,9 @@ main {
                 font-weight: bold;
             }
 
-            .divMod {
-                .mod {
-                    z-index: 22222;
-                    background-color: black;
-                    pointer-events: visible;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    height: 100%;
-                    width: 100%;
+            // .divMod {
 
-                    .x {
-                        float: right;
-                        color: white;
-                        background-color: rgb(56, 56, 56);
-                        border: none;
-                        padding: 10px;
-                    }
-
-                    .modContent {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        height: 80%;
-                        width: 100%;
-                    }
-                }
-            }
+            // }
         }
     }
 
@@ -183,6 +201,7 @@ main {
     .sixth_section {
         height: fit-content;
         padding: 20px;
+
         /* container */
         .caro-holder2 {
             overflow-x: hidden;
@@ -191,11 +210,12 @@ main {
                 height: 450px;
                 width: 33vw;
                 position: relative;
-                
+
                 .slider2 {
                     height: 100%;
                     width: 700%;
                     transition: all 0.7s;
+
                     section {
                         flex-basis: 100%;
                         display: flex;
@@ -210,14 +230,16 @@ main {
                             filter: brightness(50%);
                             position: absolute;
                         }
-                        .caro-text{
+
+                        .caro-text {
                             position: absolute;
                             left: 0;
                             z-index: 1111;
                             color: white;
                             left: 5%;
                             bottom: 10%;
-                            h3{
+
+                            h3 {
                                 width: fit-content;
                             }
                         }
