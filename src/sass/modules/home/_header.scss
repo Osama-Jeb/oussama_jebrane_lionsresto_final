@@ -17,6 +17,7 @@ header {
         top: 0;
         background-color: white;
         z-index: 11111;
+        height: 10vh;
 
         .logo {
             font-size: xx-large;
@@ -86,26 +87,12 @@ header {
             }
         }
 
-        .btnHolder {
-
-            label #btn,
-            label #cancel {
-                color: white;
-                font-size: 30px;
-                float: right;
-                line-height: 80px;
-                margin-right: 40px;
-                margin-top: 15px;
-                cursor: pointer;
-                display: none;
-            }
-
-            #check {
-                display: none;
-            }
-        }
     }
 }
+.showMenu {
+    transform: translateX(0);
+}
+
 
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -114,20 +101,32 @@ header {
             height: fit-content;
 
             ul {
-                position: absolute;
-                width: 100vw;
-                background-color: white;
-                top: 100px;
+                position: fixed;
                 text-align: center;
-                transition: all .5s;
+                transform: translateX(100%);
+                transition: transform 0.5s;
+                top: calc(10vh + 25px);
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $chefGray;
+                list-style: none;
+                padding-top: 2rem;
+                li{
+                    margin-top: 10px;
+                }
+                
             }
 
             .btnHolder {
                 .hamburger {
+                    padding: 4px;
                     border: none;
-                    outline: none;
-                    background-color: transparent;
-                    font-size: x-large;
+                    background: transparent;
+
+                    .closeIcon {
+                        display: none;
+                    }
                 }
             }
         }

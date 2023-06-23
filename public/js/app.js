@@ -1,18 +1,31 @@
-//todo THE NAV BAR IS STILL VISIBLE
-let ham = document.querySelector(".hamburger");
-let ulLinks = document.querySelector(".links");
-ulLinks.style.right = "-100%";
-ulLinks.style.display = "none";
+//TODO add comments about this later
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger = document.querySelector(".hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
 
-ham.addEventListener("click", () => {
-    if (ulLinks.style.right == "-100%") {
-        ulLinks.style.right = "0%";
-        ham.innerHTML = `<i class="fa-solid fa-x"></i>`
+function toggleMenu() {
+    if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
     } else {
-        ulLinks.style.right = "-100%"
-        ham.innerHTML = `<i class="fa-solid fa-grip-lines"></i>`
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
     }
-})
+}
+
+hamburger.addEventListener("click", toggleMenu);
+menuItems.forEach(
+    function (menuItem) {
+        menuItem.addEventListener("click", toggleMenu);
+    }
+)
+
+
+
 
 let watchVidBtns = document.querySelectorAll(".watchVid");
 let myMod = document.querySelectorAll(".mod");
@@ -88,7 +101,7 @@ let li_circles = document.querySelectorAll(".slider-controls li");
 li_circles.forEach(function (indicator, ind) {
     // if one of them is clicked then execute the function
     indicator.addEventListener('click', function () {
-        
+
         // ind is the index of the currently cliccked li circle
         sectionIndex = ind + 2;
         // choose the currently selected circle and remove the class selected from it
@@ -103,9 +116,11 @@ li_circles.forEach(function (indicator, ind) {
 // Hahaha it worked XD
 window.onload = function () {
     li_circles[0].click();
+    li_circles2[0].click();
 }
 
 //* EVENTS CAROUSEL
+//// SAME AS THE ONE ABOVE. 
 
 let slider2 = document.querySelector(".slider2");
 let sectionIndex2 = 0;
@@ -114,7 +129,7 @@ let li_circles2 = document.querySelectorAll(".slider-controls2 li");
 li_circles2.forEach(function (indicator2, ind) {
     // if one of them is clicked then execute the function
     indicator2.addEventListener('click', function () {
-        
+
         // ind is the index of the currently cliccked li circle
         sectionIndex2 = ind + 2;
         // choose the currently selected circle and remove the class selected from it
@@ -125,6 +140,3 @@ li_circles2.forEach(function (indicator2, ind) {
         slider2.style.transform = 'translate(' + (sectionIndex2) * -100 / numberOfSlide2 + '%)';
     });
 });
-window.onload = function () {
-    li_circles2[0].click();
-}

@@ -14244,6 +14244,7 @@ header nav {
   top: 0;
   background-color: white;
   z-index: 11111;
+  height: 10vh;
 }
 header nav .logo {
   font-size: xx-large;
@@ -14301,19 +14302,9 @@ header nav ul .dropdown .dropdown-content .dropLink {
 header nav ul .dropdown:hover .dropdown-content {
   display: block;
 }
-header nav .btnHolder label #btn,
-header nav .btnHolder label #cancel {
-  color: white;
-  font-size: 30px;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  margin-top: 15px;
-  cursor: pointer;
-  display: none;
-}
-header nav .btnHolder #check {
-  display: none;
+
+.showMenu {
+  transform: translateX(0);
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -14321,18 +14312,28 @@ header nav .btnHolder #check {
     height: fit-content;
   }
   header nav ul {
-    position: absolute;
-    width: 100vw;
-    background-color: white;
-    top: 100px;
+    position: fixed;
     text-align: center;
-    transition: all 0.5s;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    top: calc(10vh + 25px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eeeeee;
+    list-style: none;
+    padding-top: 2rem;
+  }
+  header nav ul li {
+    margin-top: 10px;
   }
   header nav .btnHolder .hamburger {
+    padding: 4px;
     border: none;
-    outline: none;
-    background-color: transparent;
-    font-size: x-large;
+    background: transparent;
+  }
+  header nav .btnHolder .hamburger .closeIcon {
+    display: none;
   }
 }
 .body {
