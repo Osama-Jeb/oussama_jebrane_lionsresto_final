@@ -119,27 +119,25 @@
                 <div class="forBg"></div>
                 <div class="ytVidFrame w-25" id="modCnx">
 
-                    <div class="holder d-flex justify-content-evenly align-items-center">
+                    <div class="holder d-flex flex-column gap-4 justify-content-evenly align-items-center ">
                         <!--& SIGN IN cnxMod -->
                         <div class="signed">
                             <button class="openCnx btn btn-chefRed px-4 rounded-pill" id="cnxMod1"> SIGN UP </button>
                             <div class="d-none cnxMod signUp" id="cnxMod1">
-                                <button class="closeCnx ex btn btn-chefGray" id="cnxMod1">
-                                    <i class="closeIcon fa-solid fa-x"></i>
-                                </button>
 
-                                <div class="cnxModContent" id="cnxMod1">
+
+                                <div class="cnxModContent w-100" id="cnxMod1">
                                     <form action=""
-                                        class="d-flex flex-column align-items-center justify-content-center">
-                                        <input type="text" placeholder="Name" id="signName">
-                                        <input type="text" placeholder="Email" id="signEmail">
-                                        <input type="password" placeholder="Password" id="signPassword">
-                                        <input type="password" placeholder="Confirm Pasword" id="signConfirmPw">
+                                        class="d-flex flex-column align-items-center justify-content-center gap-3 w-100">
+                                        <input class="w-100 p-2" type="text" placeholder="Name" id="signName">
+                                        <input class="w-100 p-2" type="text" placeholder="Email" id="signEmail">
+                                        <input class="w-100 p-2" type="password" placeholder="Password" id="signPassword">
+                                        <input class="w-100 p-2" type="password" placeholder="Confirm Pasword" id="signConfirmPw">
                                     </form>
                                     <div class="pb-5">
-                                        <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Sign In"
+                                        <input class="closeCnx btn btn-chefRed px-4 border-0" type="submit" value="Sign In"
                                             id="inputSign">
-                                        <input class=" btn btn-chefRed border-0" type="submit" value="Show"
+                                        <input class=" btn btn-chefRed px-4 border-0" type="submit" value="Show"
                                             id="signShow">
                                     </div>
                                 </div>
@@ -151,20 +149,17 @@
                         <div class="signed">
                             <button class="openCnx btn btn-chefRed px-4 rounded-pill" id="cnxMod2"> LOG IN </button>
                             <div class="d-none cnxMod " id="cnxMod2">
-                                <button class="closeCnx ex btn btn-chefGray" id="cnxMod2">
-                                    X
-                                </button>
 
-                                <div class="cnxModContent" id="cnxMod2">
+                                <div class="cnxModContent w-100" id="cnxMod2">
                                     <form action=""
-                                        class="d-flex flex-column align-items-center justify-content-center">
-                                        <input type="text" placeholder="Email" id="logEmail">
-                                        <input type="password" placeholder="Password" id="logPassword">
+                                        class="d-flex flex-column align-items-center justify-content-center w-100">
+                                        <input class="w-100 p-2" type="text" placeholder="Email" id="logEmail">
+                                        <input class="w-100 p-2" type="password" placeholder="Password" id="logPassword">
                                     </form>
                                     <div class="pb-5">
-                                        <input class="closeCnx btn btn-chefRed border-0" type="submit" value="Log In"
+                                        <input class="closeCnx btn btn-chefRed px-4 border-0" type="submit" value="Log In"
                                             id="inputLog">
-                                        <input class="btn btn-chefRed border-0" type="submit" value="Show" id="logShow">
+                                        <input class="btn btn-chefRed px-4 border-0" type="submit" value="Show" id="logShow">
                                     </div>
                                 </div>
                                 <button class="closeCnx close btn btn-chefDark" id="cnxMod2"> CLOSE </button>
@@ -213,8 +208,7 @@
         <!--- Second Section: About Us -->
         <div class="second_section p-2" id="second_section">
 
-            <div class="aboutTitle text-center">
-                <p>ABOUT US</p>
+            <div class="aboutTitle text-center fs-3 mt-4">
                 <h2>LEARN MORE <span class="text-chefRed">ABOUT US</span></h2>
             </div>
 
@@ -250,8 +244,8 @@
                     <div class="aboutVideo w-100">
                         <img src="./public/img/about-2.jpg" class="w-100" alt="">
                         <!-- ^^ Button for Second Video Modal -->
-                        <button class="btnOpen btn btn-chefRed rounded-circle p-4" id="modVid2">
-                            <i class="fa-solid fa-circle-play fa-2xl"></i>
+                        <button class="btnOpen btn btn-chefRed rounded-pill px-4 py-2 fw-bold" id="modVid2">
+                            Play Video
                         </button>
                     </div>
                 </div>
@@ -263,7 +257,7 @@
         <!--- Third Section: Why Choose LionsResto -->
         <div id="third_section" class="third_section bg-chefGray d-flex flex-column flex-lg-row gap-3 p-5">
 
-            <div class="why p-3">
+            <div class="why rounded p-3">
                 <h2>Why Choose LionsResto ?</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus numquam debitis totam nobis
                     exercitationem corrupti veritatis rem itaque odio iure, similique, placeat explicabo dignissimos
@@ -276,19 +270,19 @@
 
             <!-- Reasons Cards -->
             <div class="reasons d-flex flex-column flex-lg-row align-items-center gap-3">
-                <div class="reason d-flex flex-column align-items-center bg-light p-5 gap-4 text-center">
+                <div class="reason rounded d-flex flex-column align-items-center bg-light p-5 gap-4 text-center">
                     <i class="fa-solid fa-clipboard-list fa-lg text-chefRed"></i>
                     <h3>Lorem ipsum dolor sit amet.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequuntur nobis nulla a,
                         accusamus harum.</p>
                 </div>
-                <div class="reason d-flex flex-column align-items-center bg-light p-5 gap-4 text-center">
+                <div class="reason rounded d-flex flex-column align-items-center bg-light p-5 gap-4 text-center">
                     <i class="fa-solid fa-gem fa-lg text-chefRed"></i>
                     <h3>Lorem ipsum dolor sit amet.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequuntur nobis nulla a,
                         accusamus harum.</p>
                 </div>
-                <div class="reason d-flex flex-column align-items-center bg-light p-5 gap-4 text-center">
+                <div class="reason rounded d-flex flex-column align-items-center bg-light p-5 gap-4 text-center">
                     <i class="fa-solid fa-box-archive fa-lg text-chefRed"></i>
                     <h3>Lorem ipsum dolor sit amet.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequuntur nobis nulla a,
@@ -299,7 +293,7 @@
 
 
         <!--- Fourth Section: Stats -->
-        <div id="fourth_section" class="fourth_section">
+        <div id="fourth_section" class="fourth_section fs-5">
             <!-- For Black filter -->
             <div class="black"></div>
 
@@ -334,8 +328,7 @@
         <!--- Fifth Section: Menu Tab List -->
         <div id="fifth_section" class="fifth_section p-5">
 
-            <div class="menuTitle text-center">
-                <p>OUR MENU</p>
+            <div class="menuTitle text-center fs-3 mb-4">
                 <h2>CHECK OUR <span class="text-chefRed">LIONSRESTO MENU</span></h2>
             </div>
 
@@ -598,7 +591,6 @@
                 <div class="carous2">
                     <div class="slider2 d-flex justify-content-start">
                         <!-- Each section is an Image -->
-                        <!-- There are more images than normal because of style -->
                         <section>
                             <img src="./public/img/events-2.jpg" alt="">
                             <div class="caro-text">

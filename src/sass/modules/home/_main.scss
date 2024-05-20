@@ -363,6 +363,7 @@ main {
                 font-family: amatic-b;
             }
         }
+
         .caro-holder {
             overflow-x: hidden;
 
@@ -489,7 +490,7 @@ main {
             transform: translate(-50%, -50%);
             border-radius: 15px;
             height: fit-content;
-            width: fit-content;
+            width: 40vw;
             padding: 20px;
             background-color: $chefGray;
             pointer-events: visible;
@@ -498,7 +499,8 @@ main {
             .ex {
                 margin-left: 75%;
             }
-            .ex:hover{
+
+            .ex:hover {
                 background-color: $chefRed !important;
                 color: white !important;
             }
@@ -526,6 +528,14 @@ main {
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
+    .holder {
+        .signed {
+            .cnxMod {
+                width: 90vw;
+            }
+        }
+    }
+
     main {
         .second_section {
             .about {
